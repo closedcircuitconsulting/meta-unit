@@ -1,0 +1,12 @@
+header:
+  version: 20
+
+local_conf_header:
+  meta-raspberrypi: |
+    LICENSE_FLAGS_ACCEPTED:append = " synaptics-killswitch"
+    RPI_USE_U_BOOT = "1"
+    ENABLE_UART = "1"
+    ENABLE_DWC2_HOST = "1"
+    ENABLE_SPI_BUS = "1"
+    ENABLE_WATCHDOG = "1"
+    PREFERRED_VERSION_linux-raspberrypi ?= "6.12.%"

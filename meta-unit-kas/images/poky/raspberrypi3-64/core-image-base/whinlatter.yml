@@ -1,0 +1,16 @@
+header:
+  version: 20
+  includes:
+    - meta-unit-kas/include/layers/bitbake/2.16.yml
+    - meta-unit-kas/include/layers/bitbake/remote.yml
+    - meta-unit-kas/include/layers/openembedded-core/whinlatter.yml
+    - meta-unit-kas/include/layers/openembedded-core/remote.yml
+    - meta-unit-kas/include/layers/openembedded-core/core-image-base.yml
+    - meta-unit-kas/include/layers/openembedded-core/passwordless-root-login.yml
+    - meta-unit-kas/include/layers/meta-yocto/whinlatter.yml
+    - meta-unit-kas/include/layers/meta-yocto/remote.yml
+    - meta-unit-kas/include/layers/meta-yocto/poky.yml
+    - meta-unit-kas/include/layers/meta-raspberrypi/remote.yml
+    - meta-unit-kas/include/layers/meta-raspberrypi/main.yml
+    - meta-unit-kas/include/layers/meta-raspberrypi/raspberrypi3-64.yml
+    - meta-unit-kas/include/layers/meta-raspberrypi/conf.yml

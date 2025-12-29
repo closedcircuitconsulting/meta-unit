@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-raspberrypi:
+    branch: master
+    commit: 44cb3ba79c736732b8d4a9311181055e18e863d3
