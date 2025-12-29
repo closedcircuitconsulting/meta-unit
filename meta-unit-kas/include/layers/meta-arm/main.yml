@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-arm:
+    branch: master
+    commit: 30d4078278d0eb5d477fdb0abd9502663bd3364a

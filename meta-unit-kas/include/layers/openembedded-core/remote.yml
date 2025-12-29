@@ -1,0 +1,9 @@
+header:
+  version: 20
+
+repos:
+  openembedded-core:
+    url: https://git.openembedded.org/openembedded-core
+    path: layers/openembedded-core
+    layers:
+      meta:

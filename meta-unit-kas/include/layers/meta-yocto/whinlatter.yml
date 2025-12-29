@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-yocto:
+    branch: whinlatter
+    commit: d02d3faaf4d6075ea03e9eb47654ec7639f929a0

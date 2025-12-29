@@ -1,0 +1,10 @@
+header:
+  version: 20
+
+repos:
+  meta-yocto:
+    url: https://git.yoctoproject.org/meta-yocto
+    path: layers/meta-yocto
+    layers:
+      meta-poky:
+      meta-yocto-bsp:

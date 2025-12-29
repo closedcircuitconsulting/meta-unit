@@ -1,0 +1,25 @@
+header:
+  version: 20
+  includes:
+    - meta-unit-kas/include/layers/bitbake/2.16.yml
+    - meta-unit-kas/include/layers/bitbake/remote.yml
+    - meta-unit-kas/include/layers/openembedded-core/whinlatter.yml
+    - meta-unit-kas/include/layers/openembedded-core/remote.yml
+    - meta-unit-kas/include/layers/openembedded-core/core-image-base.yml
+    - meta-unit-kas/include/layers/openembedded-core/passwordless-root-login.yml
+    - meta-unit-kas/include/layers/meta-yocto/whinlatter.yml
+    - meta-unit-kas/include/layers/meta-yocto/remote.yml
+    - meta-unit-kas/include/layers/meta-yocto/poky.yml
+    - meta-unit-kas/include/layers/meta-arm/remote.yml
+    - meta-unit-kas/include/layers/meta-arm/main.yml
+    - meta-unit-kas/include/layers/meta-rockchip/remote.yml
+    - meta-unit-kas/include/layers/meta-rockchip/main.yml
+    - meta-unit-kas/include/layers/meta-rockchip/radxa-zero-3e.yml
+    - meta-unit-kas/include/layers/meta-rockchip/conf.yml
+
+repos:
+  meta-arm:
+    layers:
+      meta-arm-toolchain:
+      meta-arm:
+      meta-arm-bsp:

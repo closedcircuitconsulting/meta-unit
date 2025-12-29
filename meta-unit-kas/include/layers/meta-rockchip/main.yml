@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-rockchip:
+    branch: master
+    commit: 2a13a49da4af4487ee71db6aff19364220da694a

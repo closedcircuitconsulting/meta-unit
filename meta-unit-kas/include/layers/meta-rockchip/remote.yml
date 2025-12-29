@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-rockchip:
+    url: https://git.yoctoproject.org/meta-rockchip
+    path: layers/meta-rockchip
