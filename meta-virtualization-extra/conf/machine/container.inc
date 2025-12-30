@@ -1,0 +1,3 @@
+PREFERRED_PROVIDER_virtual/kernel = "linux-dummy"
+
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS = ""

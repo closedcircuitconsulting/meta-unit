@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-virtualization:
+    branch: master
+    commit: b9a29d2423407c1e50f19dc3f3e154d164c5f0ec

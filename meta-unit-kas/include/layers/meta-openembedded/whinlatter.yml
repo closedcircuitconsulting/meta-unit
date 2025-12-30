@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-openembedded:
+    branch: whinlatter
+    commit: a4e768dcfae181dd99e39c4286fa0729ca7f4e47

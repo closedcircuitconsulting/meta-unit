@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-openembedded:
+    url: https://git.openembedded.org/meta-openembedded
+    path: layers/meta-openembedded

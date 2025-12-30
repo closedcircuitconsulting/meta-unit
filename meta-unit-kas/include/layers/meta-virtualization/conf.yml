@@ -1,0 +1,6 @@
+header:
+  version: 20
+
+local_conf_header:
+  meta-virtualization: |
+    DISTRO_FEATURES:append = " virtualization"
