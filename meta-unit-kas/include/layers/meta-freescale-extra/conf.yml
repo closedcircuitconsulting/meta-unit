@@ -1,0 +1,6 @@
+header:
+  version: 20
+
+local_conf_header:
+  meta-freescale-extra: |
+    WKS_FILE = "imx-uboot-bootpart-no-tagged-suffix.wks.in"

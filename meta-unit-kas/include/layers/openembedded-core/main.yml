@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  openembedded-core:
+    branch: master
+    commit: 2e4c9b8dee3b1d545aee354ac1f8c6a5c0bad433

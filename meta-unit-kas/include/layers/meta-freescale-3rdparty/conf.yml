@@ -1,0 +1,6 @@
+header:
+  version: 20
+
+local_conf_header:
+  meta-freescale-3rdparty-tweaks: |
+    PREFERRED_PROVIDER_virtual/kernel = "linux-fslc-imx"

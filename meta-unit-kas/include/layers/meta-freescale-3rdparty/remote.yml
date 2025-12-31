@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-freescale-3rdparty:
+    url: https://github.com/Freescale/meta-freescale-3rdparty
+    path: layers/meta-freescale-3rdparty
