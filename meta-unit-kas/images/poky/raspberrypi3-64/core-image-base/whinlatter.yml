@@ -14,3 +14,4 @@ header:
     - meta-unit-kas/include/layers/meta-raspberrypi/main.yml
     - meta-unit-kas/include/layers/meta-raspberrypi/raspberrypi3-64.yml
     - meta-unit-kas/include/layers/meta-raspberrypi/conf.yml
+    - meta-unit-kas/include/features/ssh.yml
