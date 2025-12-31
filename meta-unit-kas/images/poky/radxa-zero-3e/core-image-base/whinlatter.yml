@@ -16,6 +16,7 @@ header:
     - meta-unit-kas/include/layers/meta-rockchip/main.yml
     - meta-unit-kas/include/layers/meta-rockchip/radxa-zero-3e.yml
     - meta-unit-kas/include/layers/meta-rockchip/conf.yml
+    - meta-unit-kas/include/features/ssh.yml
 
 repos:
   meta-arm:
