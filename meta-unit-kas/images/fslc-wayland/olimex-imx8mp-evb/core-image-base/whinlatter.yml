@@ -24,6 +24,7 @@ header:
     - meta-unit-kas/include/layers/meta-freescale-distro/remote.yml
     - meta-unit-kas/include/layers/meta-freescale-distro/fslc-wayland.yml
     - meta-unit-kas/include/layers/meta-freescale-extra/conf.yml
+    - meta-unit-kas/include/features/ssh.yml
 
 repos:
   meta-openembedded:
