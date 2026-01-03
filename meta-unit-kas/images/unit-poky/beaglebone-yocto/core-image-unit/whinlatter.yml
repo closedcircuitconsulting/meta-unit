@@ -1,0 +1,29 @@
+header:
+  version: 20
+  includes:
+    - meta-unit-kas/include/layers/bitbake/2.16.yml
+    - meta-unit-kas/include/layers/bitbake/remote.yml
+    - meta-unit-kas/include/layers/openembedded-core/whinlatter.yml
+    - meta-unit-kas/include/layers/openembedded-core/remote.yml
+    - meta-unit-kas/include/layers/meta-yocto/whinlatter.yml
+    - meta-unit-kas/include/layers/meta-yocto/remote.yml
+    - meta-unit-kas/include/layers/meta-yocto/beaglebone-yocto.yml
+    - meta-unit-kas/include/layers/meta-openembedded/whinlatter.yml
+    - meta-unit-kas/include/layers/meta-openembedded/remote.yml
+    - meta-unit-kas/include/layers/meta-virtualization/main.yml
+    - meta-unit-kas/include/layers/meta-virtualization/remote.yml
+    - meta-unit-kas/include/layers/meta-unit-core/core-image-unit.yml
+    - meta-unit-kas/include/layers/meta-unit-distro/unit-poky.yml
+
+repos:
+  meta-openembedded:
+    layers:
+      meta-filesystems:
+      meta-oe:
+      meta-networking:
+      meta-python:
+  meta-unit:
+    layers:
+      meta-unit-core:
+      meta-unit-distro:
+      meta-virtualization-extra:
