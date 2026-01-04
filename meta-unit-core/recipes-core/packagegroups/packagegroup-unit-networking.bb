@@ -4,3 +4,4 @@ inherit packagegroup
 
 RDEPENDS:${PN}:append = " curl"
 RDEPENDS:${PN}:append = " openssh"
+RDEPENDS:${PN}:append = " socat"
