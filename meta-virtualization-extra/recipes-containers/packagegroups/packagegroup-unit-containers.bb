@@ -25,3 +25,6 @@ RDEPENDS:${PN}:append = " skopeo"
 
 # Working with container images
 RDEPENDS:${PN}:append = " umoci"
+
+# Introspect & control state of systemd VM and container registration manager
+RDEPENDS:${PN}:append = " systemd-container"
