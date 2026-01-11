@@ -1,0 +1,19 @@
+[Unit]
+Description=Serves a custom ASCII banner
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+ContainerName=banner
+Image=ghcr.io/closedcircuitconsulting/banner:0.1.0
+PublishPort=8093:8080
+
+[Service]
+Restart=on-failure
+RestartSec=10s
+RestartSteps=5
+RestartMaxDelaySec=1min
+TimeoutStartSec=15min
+
+[Install]
+WantedBy=multi-user.target default.target

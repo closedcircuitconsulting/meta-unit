@@ -8,3 +8,6 @@ RDEPENDS:${PN}:append = " libpam"
 
 # Add admin user.
 RDEPENDS:${PN}:append = " add-user-unitexe"
+
+# Add service user.
+RDEPENDS:${PN}:append = " add-user-svc"
