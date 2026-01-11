@@ -27,6 +27,7 @@ repos:
       meta-python:
   meta-unit:
     layers:
+      meta-raspberrypi-extra:
       meta-unit-core:
       meta-unit-distro:
       meta-virtualization-extra:
