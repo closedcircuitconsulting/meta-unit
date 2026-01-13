@@ -4,4 +4,4 @@ header:
 repos:
   meta-yocto:
     branch: whinlatter
-    commit: d02d3faaf4d6075ea03e9eb47654ec7639f929a0
+    commit: 6973ca663aaa9c3ab517ee960ab7985a5bf54c07

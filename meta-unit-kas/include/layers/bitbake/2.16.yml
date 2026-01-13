@@ -3,7 +3,7 @@ header:
 
 repos:
   bitbake:
-    branch: master
-    commit: 80761fe2062464035033b5a7681709b4fc308198
+    branch: "2.16"
+    commit: 663021740bc086bd959a8457ad9ddb6da52a8278
     layers:
       bitbake: disabled

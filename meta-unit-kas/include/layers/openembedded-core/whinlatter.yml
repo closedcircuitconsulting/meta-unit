@@ -4,4 +4,4 @@ header:
 repos:
   openembedded-core:
     branch: whinlatter
-    commit: 9964fa3da2fa1e7243fba1a826e59f7bb1813706
+    commit: dd10706cfafb5574b7cf316fca2300d166ef71b0
