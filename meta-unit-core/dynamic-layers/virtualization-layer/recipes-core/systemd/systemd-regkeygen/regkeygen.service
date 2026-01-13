@@ -1,0 +1,13 @@
+[Unit]
+Description=Generate registry TLS keys for device
+ConditionPathExists=!/etc/registry/domain.crt
+ConditionPathExists=!/etc/registry/domain.key
+After=time-sync.target
+Wants=time-sync.target systemd-time-wait-sync.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/regkeygen.sh
+
+[Install]
+WantedBy=multi-user.target

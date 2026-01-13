@@ -1,0 +1,23 @@
+[Unit]
+Description=A registry container
+After=time-sync.target regkeygen.service
+Wants=time-sync.target systemd-time-wait-sync.service regkeygen.service
+
+[Container]
+ContainerName=registry
+Image=docker.io/registry:latest
+PublishPort=127.0.0.1:5000:5000
+Volume=/etc/registry:/certs
+Volume=registry-data:/var/lib/registry
+Environment=REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt
+Environment=REGISTRY_HTTP_TLS_KEY=/certs/domain.key
+
+[Service]
+Restart=on-failure
+RestartSec=10s
+RestartSteps=5
+RestartMaxDelaySec=1min
+TimeoutStartSec=15min
+
+[Install]
+WantedBy=multi-user.target default.target
