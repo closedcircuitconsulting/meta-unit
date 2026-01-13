@@ -5,8 +5,9 @@ Wants=network-online.target
 
 [Container]
 ContainerName=banner
-Image=ghcr.io/closedcircuitconsulting/banner:0.1.0
+Image=localhost:5000/banner:latest
 PublishPort=8093:8080
+Environment=PYTHONUNBUFFERED=1
 
 [Service]
 Restart=on-failure
@@ -16,4 +17,4 @@ RestartMaxDelaySec=1min
 TimeoutStartSec=15min
 
 [Install]
-WantedBy=multi-user.target default.target
+WantedBy=default.target
