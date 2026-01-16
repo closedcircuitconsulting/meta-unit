@@ -1,0 +1,42 @@
+# Save the output of this file and use kubectl create -f to import
+# it into Kubernetes.
+#
+# Created with podman-5.6.2
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    io.kubernetes.cri-o.SandboxID/grpcurl-client: 817d1ab354c6fa173eb343fa4454496907e13462228109fdc6c4e053b976815c
+    io.kubernetes.cri-o.SandboxID/pubd: 817d1ab354c6fa173eb343fa4454496907e13462228109fdc6c4e053b976815c
+  creationTimestamp: "2026-01-16T04:27:46Z"
+  labels:
+    app: pubsubd
+  name: pubsubd
+spec:
+  containers:
+  - image: ghcr.io/closedcircuitconsulting/pubd:latest
+    name: pubd
+    ports:
+    - containerPort: 60069
+  - args:
+    - -plaintext
+    - -import-path
+    - /proto
+    - -proto
+    - countah.proto
+    - -d
+    - '{}'
+    - localhost:60069
+    - unit.countah.v0.Countah.Counter
+    image: docker.io/fullstorydev/grpcurl:latest-alpine
+    name: grpcurl-client
+    securityContext: {}
+    volumeMounts:
+    - mountPath: /proto
+      name: pubd-proto
+      readOnly: true
+  volumes:
+  - hostPath:
+      path: /home/svc/.config/proto/pubd
+      type: Directory
+    name: pubd-proto

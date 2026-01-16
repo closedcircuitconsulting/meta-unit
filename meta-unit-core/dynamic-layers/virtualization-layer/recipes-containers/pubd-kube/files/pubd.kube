@@ -1,0 +1,15 @@
+[Unit]
+Description=A pubsub multi-container application
+
+[Kube]
+Yaml=/home/svc/.config/containers/kube/pubsubd.yml
+
+[Service]
+Restart=on-failure
+RestartSec=10s
+RestartSteps=5
+RestartMaxDelaySec=1min
+TimeoutStartSec=15min
+
+[Install]
+WantedBy=default.target
