@@ -14,7 +14,7 @@ metadata:
   name: pubsubd
 spec:
   containers:
-  - image: ghcr.io/closedcircuitconsulting/pubd:latest
+  - image: localhost:5000/pubd:latest
     name: pubd
     ports:
     - containerPort: 60069
@@ -28,7 +28,7 @@ spec:
     - '{}'
     - localhost:60069
     - unit.countah.v0.Countah.Counter
-    image: docker.io/fullstorydev/grpcurl:latest-alpine
+    image: localhost:5000/grpcurl:latest
     name: grpcurl-client
     securityContext: {}
     volumeMounts:
