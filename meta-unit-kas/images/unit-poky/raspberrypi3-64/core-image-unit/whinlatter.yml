@@ -30,4 +30,5 @@ repos:
       meta-raspberrypi-extra:
       meta-unit-core:
       meta-unit-distro:
+      meta-unit-profiling:
       meta-virtualization-extra:

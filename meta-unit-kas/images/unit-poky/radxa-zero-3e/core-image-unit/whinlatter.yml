@@ -36,4 +36,5 @@ repos:
     layers:
       meta-unit-core:
       meta-unit-distro:
+      meta-unit-profiling:
       meta-virtualization-extra:
