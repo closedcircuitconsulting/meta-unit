@@ -5,7 +5,6 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=a77c12e0c0e8a14cebb1494195720ccc"
 
 SRC_URI = "\
     git://git.closedcircuitconsulting.com/banner;branch=main;protocol=https \
-    file://0001-have-quadlet-use-image-from-local-registry.patch \
 "
 
 SRCREV = "7649e504129e46cca8b24a1ad22e17518e5f9bea"
