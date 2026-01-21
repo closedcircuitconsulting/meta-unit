@@ -6,7 +6,7 @@ Wants=time-sync.target systemd-time-wait-sync.service
 [Container]
 ContainerName=prometheus
 Image=docker.io/prom/prometheus:latest
-Network=pasta:-T,9091:9091,-T,9882:9882,-T,9883:9883
+Network=pasta:-T,9091:9091,-T,9882:9882,-T,9883:9883,-T,9100:9100
 PublishPort=127.0.0.1:9090:9090
 Volume=prometheus-data:/var/lib/prometheus
 Volume=%h/.config/containers/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
