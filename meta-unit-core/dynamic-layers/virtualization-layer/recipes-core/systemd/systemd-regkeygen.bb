@@ -1,30 +1,34 @@
-SUMMARY = "Systemd service for generating TLS key and cert for local registry"
-SECTION = "core"
+SUMMARY = "Systemd service for generating TLS key and cert for distribution"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
+LIC_FILES_CHKSUM = "file://${UNIT_CORE_LAYERDIR}/LICENSE;md5=38bf13be5d6979b28bd8adddb2f2f9b3"
 
-SYSTEMD_SERVICE:${PN} = "regkeygen.service"
+inherit systemd
 
 SRC_URI = "\
     file://regkeygen.service \
     file://regkeygen.sh \
 "
 
+RDEPENDS:${PN}:append = " add-user-svc"
+RDEPENDS:${PN}:append = " openssl"
+
 S = "${UNPACKDIR}"
 
+SYSTEMD_USER = "svc"
+SYSTEMD_USER_UNITDIR = "/home/${SYSTEMD_USER}/.config/systemd/user"
+USER_BINDIR = "/home/${SYSTEMD_USER}/bin"
+
 do_install() {
-    install -D -p -m0644 ${UNPACKDIR}/regkeygen.service ${D}${systemd_system_unitdir}/regkeygen.service
-    install -D -p -m0755 ${UNPACKDIR}/regkeygen.sh ${D}${bindir}/regkeygen.sh
+    install -D -p -m0644 ${UNPACKDIR}/regkeygen.service ${D}${SYSTEMD_USER_UNITDIR}/regkeygen.service
+    install -D -p -m0755 ${UNPACKDIR}/regkeygen.sh ${D}${USER_BINDIR}/regkeygen.sh
+    
+    # Auto-enable systemd unit by creating the appropriate symlink
+    install -d ${D}${SYSTEMD_USER_UNITDIR}/default.target.wants
+    ln -sf ${SYSTEMD_USER_UNITDIR}/regkeygen.service ${D}${SYSTEMD_USER_UNITDIR}/default.target.wants/regkeygen.service
 }
 
-inherit systemd
-
 FILES:${PN} = "\
-    ${systemd_system_unitdir} \
-    ${bindir} \
-"
-
-RDEPENDS:${PN} = "\
-    openssl \
-    ca-certificates \
+    ${SYSTEMD_USER_UNITDIR}/regkeygen.service \
+    ${SYSTEMD_USER_UNITDIR}/default.target.wants/regkeygen.service \
+    ${USER_BINDIR}/regkeygen.sh \
 "

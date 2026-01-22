@@ -1,0 +1,29 @@
+version: 0.1
+storage:
+    delete:
+      enabled: true
+    cache:
+        blobdescriptor: inmemory
+    filesystem:
+        rootdirectory: /var/lib/distribution
+    maintenance:
+        uploadpurging:
+            enabled: false
+    tag:
+      concurrencylimit: 8
+http:
+    addr: 0.0.0.0:5000
+    tls:
+      certificate: /certs/domain.crt
+      key: /certs/domain.key
+    debug:
+        addr: 0.0.0.0:5001
+        prometheus:
+            enabled: true
+    headers:
+        X-Content-Type-Options: [nosniff]
+health:
+  storagedriver:
+    enabled: true
+    interval: 10s
+    threshold: 3

@@ -1,13 +1,12 @@
 [Unit]
-Description=Generate registry TLS keys for device
-ConditionPathExists=!/etc/registry/domain.crt
-ConditionPathExists=!/etc/registry/domain.key
-After=time-sync.target
-Wants=time-sync.target systemd-time-wait-sync.service
+Description=Generate distribution TLS keys
+ConditionPathExists=!%h/.config/containers/distribution/certs/domain.crt
+ConditionPathExists=!%h/.config/containers/distribution/certs/domain.key
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/regkeygen.sh
+Environment="XDG_CONFIG_HOME=%h/.config"
+ExecStart=%h/bin/regkeygen.sh
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
