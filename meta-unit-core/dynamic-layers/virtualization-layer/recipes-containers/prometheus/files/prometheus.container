@@ -1,7 +1,5 @@
 [Unit]
 Description=A prometheus container
-After=time-sync.target
-Wants=time-sync.target systemd-time-wait-sync.service
 
 [Container]
 ContainerName=prometheus
