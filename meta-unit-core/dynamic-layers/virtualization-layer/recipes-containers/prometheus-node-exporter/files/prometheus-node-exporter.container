@@ -7,7 +7,15 @@ Image=quay.io/prometheus/node-exporter:latest
 Network=host
 PodmanArgs=--pid=host
 Volume=/:/host:ro,rslave
-Exec=--path.rootfs=/host
+Volume=/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket:ro
+Exec=--path.rootfs=/host \
+--path.procfs=/host/proc \
+--collector.systemd \
+--collector.systemd.unit-include=".+" \
+--collector.processes \
+--collector.interrupts \
+--collector.interrupts.name-include=".+" \
+--collector.tcpstat
 
 [Service]
 Restart=on-failure
