@@ -22,7 +22,20 @@ USERADD_PARAM:${PN} = "-u ${USER_TO_ADD_UID} -d /home/${USER_TO_ADD_NAME} -s ${b
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
+do_install() {
+    # Note: Use of .profile here assumes busybox shell.
+    install -D -m 0644 /dev/null ${D}/home/${USER_TO_ADD_NAME}/.profile
+
+    # User is not part of sudo group and therefore doesn't 
+    # have sbin in path, add it for access to common commands.
+    cat > ${D}/home/${USER_TO_ADD_NAME}/.profile << 'EOF'
+export PATH="${sbindir}:/sbin:$PATH"
+EOF
+}
+
 # Prior to useradd being performed on the sysroot a couple things must happen:
 #   1. Need the systemd recipe to create the systemd-journal group
 #   2. Need busybox shell present
 do_prepare_recipe_sysroot[depends] += "systemd:do_populate_sysroot busybox:do_populate_sysroot"
+
+FILES:${PN}:append = " /home/${USER_TO_ADD_NAME}/.profile"
