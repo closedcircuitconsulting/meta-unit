@@ -1,12 +1,19 @@
 [Unit]
-Description=Generate distribution TLS keys
-ConditionPathExists=!%h/.config/containers/distribution/certs/domain.crt
-ConditionPathExists=!%h/.config/containers/distribution/certs/domain.key
+Description=Generate registry TLS keys for device
+ConditionPathExists=!/home/svc/.config/containers/distribution/certs/domain.crt
+ConditionPathExists=!/home/svc/.config/containers/distribution/certs/domain.key
+ConditionPathExists=!/usr/local/share/ca-certificates/registry.crt
+ConditionPathExists=!/etc/containers/certs.d/localhost:5000/ca.crt
+ConditionPathExists=!/home/svc/.config/containers/certs.d/localhost:5000/ca.crt
+ConditionPathExists=!/home/svc/.local/share/distribution/certs-ready-signal
+After=time-sync.target
+Wants=time-sync.target systemd-time-wait-sync.service
 
 [Service]
 Type=oneshot
-Environment="XDG_CONFIG_HOME=%h/.config"
-ExecStart=%h/bin/regkeygen.sh
+ExecStart=/usr/bin/regkeygen.sh
+Environment="TARGET_USR=svc"
+Environment="DISTRIBUTION_REGISTRY_URL=localhost:5000"
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target

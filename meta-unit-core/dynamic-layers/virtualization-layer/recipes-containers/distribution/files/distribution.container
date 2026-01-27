@@ -1,13 +1,12 @@
 [Unit]
 Description=A distribution container
-After=regkeygen.service
-Requires=regkeygen.service
+After=distribution.path
 
 [Container]
 ContainerName=distribution
 Image=docker.io/distribution/distribution:latest
 PublishPort=127.0.0.1:5000:5000,127.0.0.1:5001:5001
-Volume=%h/.config/containers/distribution/certs:/certs
+Volume=%h/.config/containers/distribution/certs:/certs:ro
 Volume=%h/.config/containers/distribution/config.yml:/etc/distribution/config.yml:ro
 Volume=distribution-data:/var/lib/distribution
 
@@ -17,6 +16,3 @@ RestartSec=10s
 RestartSteps=5
 RestartMaxDelaySec=1min
 TimeoutStartSec=15min
-
-[Install]
-WantedBy=default.target

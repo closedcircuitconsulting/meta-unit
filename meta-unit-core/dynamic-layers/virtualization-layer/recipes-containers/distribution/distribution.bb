@@ -10,7 +10,7 @@ SRC_URI = "\
     file://LICENSE \
 "
 
-RDEPENDS:${PN}:append = " systemd-regkeygen"
+RDEPENDS:${PN}:append = " systemd-distribution-path"
 RDEPENDS:${PN}:append = " podman"
 RDEPENDS:${PN}:append = " add-user-svc"
 

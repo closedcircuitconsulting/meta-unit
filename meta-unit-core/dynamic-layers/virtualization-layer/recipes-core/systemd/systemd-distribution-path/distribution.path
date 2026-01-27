@@ -1,0 +1,8 @@
+[Unit]
+Description=Wait for TLS cert and key
+
+[Path]
+PathExists=%h/.local/share/distribution/certs-ready-signal
+
+[Install]
+WantedBy=default.target
