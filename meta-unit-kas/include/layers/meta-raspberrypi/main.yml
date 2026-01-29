@@ -4,4 +4,4 @@ header:
 repos:
   meta-raspberrypi:
     branch: master
-    commit: b9d649e1d4ace6b4d6e7cc5516e68e1397605ecf
+    commit: cc665244bc804a773c6603a6dc7d55f3bfb8b05d
