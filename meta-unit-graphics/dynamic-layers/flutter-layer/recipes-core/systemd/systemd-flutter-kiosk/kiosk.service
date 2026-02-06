@@ -1,0 +1,15 @@
+[Unit]
+Description=Kiosk Application
+
+[Service]
+Type=simple
+Environment="WAYLAND_DISPLAY=/run/wayland-0"
+ExecStart=/usr/bin/homescreen --bundle /usr/share/flutter/@@KIOSK_APPLICATION_NAME@@/@@FLUTTER_SDK_TAG@@/release/ --fullscreen
+Restart=on-failure
+RestartSec=2s
+RestartSteps=5
+RestartMaxDelaySec=10s
+TimeoutStartSec=15min
+
+[Install]
+WantedBy=graphical.target

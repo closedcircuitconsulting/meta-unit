@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-flutter:
+    url: https://github.com/meta-flutter/meta-flutter
+    path: layers/meta-flutter
