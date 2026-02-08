@@ -1,0 +1,51 @@
+From b4b7380aab0ae3ff590e9627c59fbf5b07f47ef6 Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Sun, 8 Feb 2026 11:27:08 -0600
+Subject: [PATCH] tweak rpi environment
+
+- Restrict boot targets to SD card
+- Add custom splash support
+- Disable stdout & stderr vidconsole so it doesn't write over splash
+
+Upstream-Status: Inappropriate [embedded-specific]
+---
+ board/raspberrypi/rpi/rpi.env | 19 ++++++++++++++++---
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+
+diff --git a/board/raspberrypi/rpi/rpi.env b/board/raspberrypi/rpi/rpi.env
+index 9ac9d6768ca..b93b731406a 100644
+--- a/board/raspberrypi/rpi/rpi.env
++++ b/board/raspberrypi/rpi/rpi.env
+@@ -6,8 +6,8 @@ dhcpuboot=usb start; dhcp u-boot.uimg; bootm
+ 
+ /* Environment */
+ stdin=serial,usbkbd
+-stdout=serial,vidconsole
+-stderr=serial,vidconsole
++stdout=serial
++stderr=serial
+ 
+ /* DFU over USB/UDC */
+ #ifdef CONFIG_CMD_DFU
+@@ -77,4 +77,17 @@ pxefile_addr_r=0x05500000
+ fdt_addr_r=0x05600000
+ ramdisk_addr_r=0x05700000
+ 
+-boot_targets=mmc usb pxe dhcp
++/*
++ * Not interested in booting from anything but SD card.
++ */
++boot_targets=mmc
++
++/*
++ * Custom splash screen. Using 0x05800000 gives ramdisk_add_r ~1MB 
++ * before the splash and is well within the bootm_size limit. No
++ * alignment is necessary since image size is the same size as the
++ * target LCD.
++ */
++splashfile=yocto_project_logo_white_800x480_24bpp.bmp.gz
++splashimage=0x05800000
++splashsource=mmc_fs
+-- 
+2.43.0
+
