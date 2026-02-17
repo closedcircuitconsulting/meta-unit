@@ -1,0 +1,20 @@
+#!/bin/sh
+
+backlight_enabled() {
+    return 0
+}
+
+backlight_run() {
+    msg "Setting up display backlight..."
+    
+    for dev in /sys/class/backlight/*; do
+        if [ -e "$dev/brightness" ]; then
+            echo "Found backlight on $i: $dev" > /dev/kmsg
+            echo 255 > "$dev/brightness"
+            echo "Backlight set to 255" > /dev/kmsg
+            return 0
+        fi
+    done
+    
+    echo "No backlight device found" > /dev/kmsg
+}

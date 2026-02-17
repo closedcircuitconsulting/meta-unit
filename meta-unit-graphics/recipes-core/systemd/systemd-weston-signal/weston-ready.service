@@ -1,0 +1,16 @@
+[Unit]
+Description=Create Weston Ready Signal File For Kiosk User
+After=weston.socket
+BindsTo=weston.socket
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=/bin/sh -c 'rm -f /home/kiosk/.local/share/weston/weston-ready-signal'
+ExecStartPre=/bin/sh -c 'mkdir -p /home/kiosk/.local/share/weston'
+ExecStartPre=/bin/sh -c 'chown kiosk:kiosk /home/kiosk/.local/share/weston'
+ExecStart=/bin/sh -c 'touch /home/kiosk/.local/share/weston/weston-ready-signal && chmod 644 /home/kiosk/.local/share/weston/weston-ready-signal && chown kiosk:kiosk /home/kiosk/.local/share/weston/weston-ready-signal'
+ExecStopPost=/bin/sh -c 'rm -f /home/kiosk/.local/share/weston/weston-ready-signal'
+
+[Install]
+WantedBy=multi-user.target

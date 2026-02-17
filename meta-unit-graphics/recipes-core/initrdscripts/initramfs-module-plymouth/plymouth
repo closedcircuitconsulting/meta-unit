@@ -1,0 +1,18 @@
+#!/bin/sh
+
+plymouth_enabled() {
+	return 0
+}
+
+plymouth_run() {
+    msg "Starting Plymouth boot splash..."
+    
+    echo "Starting plymouthd..." > /dev/kmsg
+    PLYMOUTH_ARGS="--mode=boot --pid-file=/run/plymouth/pid --ignore-serial-consoles"
+    mkdir -p /dev/pts
+    mount -t devpts devpts /dev/pts 2>/dev/null || true
+    /usr/sbin/plymouthd ${PLYMOUTH_ARGS}
+    
+    echo "Showing splash..." > /dev/kmsg
+    /usr/bin/plymouth show-splash
+}

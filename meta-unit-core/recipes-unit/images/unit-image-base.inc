@@ -9,3 +9,5 @@ IMAGE_INSTALL:append = " packagegroup-unit-utils"
 
 # Allow for 4GB of extra space for misc. purposes (ex. container image storage)
 IMAGE_ROOTFS_EXTRA_SPACE = "4194304"
+
+IMAGE_FEATURES:append = " splash"

@@ -1,0 +1,8 @@
+[Unit]
+Description=Wait for weston
+
+[Path]
+PathExists=%h/.local/share/weston/weston-ready-signal
+
+[Install]
+WantedBy=graphical.target

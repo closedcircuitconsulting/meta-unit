@@ -7,6 +7,7 @@ EXCLUDE_FROM_WORLD = "1"
 inherit useradd
 inherit extrausers
 inherit enable-linger
+inherit set-xdg-env
 
 RDEPENDS:${PN}:append = " systemd"
 RDEPENDS:${PN}:append = " weston-init"
