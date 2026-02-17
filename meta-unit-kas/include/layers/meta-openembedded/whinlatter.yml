@@ -4,4 +4,4 @@ header:
 repos:
   meta-openembedded:
     branch: whinlatter
-    commit: 16cd5b1b8d06d979f4f191aa95133a90c843c03a
+    commit: d28d0a23615f4d91d125fdcd247a71245087dab3
