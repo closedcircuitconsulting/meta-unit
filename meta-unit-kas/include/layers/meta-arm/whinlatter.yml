@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-arm:
+    branch: whinlatter
+    commit: 73460c53949658ab6c8b46269c3a69caccd3f745

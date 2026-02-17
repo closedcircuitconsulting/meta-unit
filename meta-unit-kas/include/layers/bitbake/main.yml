@@ -1,0 +1,9 @@
+header:
+  version: 20
+
+repos:
+  bitbake:
+    branch: master
+    commit: cdd79c1768ac396a9c6577e38098da4331507f24
+    layers:
+      bitbake: disabled

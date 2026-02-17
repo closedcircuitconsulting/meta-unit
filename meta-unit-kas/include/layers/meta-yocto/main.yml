@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-yocto:
+    branch: master
+    commit: 2486ce2889062500e39446bc07c7d21120a0345e

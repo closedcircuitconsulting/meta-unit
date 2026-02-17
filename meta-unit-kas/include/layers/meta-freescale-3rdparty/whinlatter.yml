@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-freescale-3rdparty:
+    branch: whinlatter
+    commit: b2b1987841018013006f909f817a3e9b034c6227

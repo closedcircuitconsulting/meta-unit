@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-freescale:
+    branch: whinlatter
+    commit: 2781242e499e601ef9454009aceed16186a48d9e

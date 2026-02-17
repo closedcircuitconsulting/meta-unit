@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-rockchip:
+    branch: whinlatter
+    commit: 961768ccd13630a4b98701f5821372a9ede86e85

@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-freescale-distro:
+    branch: whinlatter
+    commit: 8001652aa3e2c6436c2bfce744e99f398c680858
