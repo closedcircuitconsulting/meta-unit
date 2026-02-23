@@ -39,4 +39,5 @@ repos:
       meta-unit-graphics:
       meta-unit-profiling:
       meta-unit-users:
+      meta-unit-virtualization:
       meta-virtualization-extra:

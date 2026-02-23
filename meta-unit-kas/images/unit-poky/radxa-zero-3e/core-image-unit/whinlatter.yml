@@ -38,4 +38,5 @@ repos:
       meta-unit-distro:
       meta-unit-profiling:
       meta-unit-users:
+      meta-unit-virtualization:
       meta-virtualization-extra:
