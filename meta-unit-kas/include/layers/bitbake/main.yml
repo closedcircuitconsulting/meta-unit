@@ -4,6 +4,6 @@ header:
 repos:
   bitbake:
     branch: master
-    commit: cdd79c1768ac396a9c6577e38098da4331507f24
+    commit: 1f8fa7c25e71cd0f230a2f6bfd9d5153c694da81
     layers:
       bitbake: disabled
