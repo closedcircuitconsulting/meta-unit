@@ -1,7 +1,7 @@
 inherit core-image
 inherit image-buildinfo
 
-IMAGE_FEATURES[validitems] += "bootsplash"
+IMAGE_FEATURES[validitems] += "boot-splash"
 IMAGE_FEATURES[validitems] += "observability"
 
 IMAGE_INSTALL:append = " packagegroup-unit-networking"
