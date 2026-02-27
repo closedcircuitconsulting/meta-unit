@@ -1,1 +1,0 @@
-inherit features_check
