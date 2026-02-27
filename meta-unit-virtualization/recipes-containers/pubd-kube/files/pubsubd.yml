@@ -28,7 +28,7 @@ spec:
     - '{}'
     - localhost:60069
     - unit.countah.v0.Countah.Counter
-    image: docker.io/fullstorydev/grpcurl:latest-alpine
+    image: ghcr.io/closedcircuitconsulting/grpcccurl:latest
     name: grpcurl-client
     securityContext: {}
     volumeMounts:
