@@ -11,6 +11,7 @@ SRC_URI = "\
 RDEPENDS:${PN}:append = " podman"
 RDEPENDS:${PN}:append = " add-user-svc"
 RDEPENDS:${PN}:append = " pubd"
+RDEPENDS:${PN}:append = " load-ip-tables-module"
 
 S = "${UNPACKDIR}"
 
