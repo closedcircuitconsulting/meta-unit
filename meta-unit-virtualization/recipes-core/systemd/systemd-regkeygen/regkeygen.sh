@@ -63,8 +63,8 @@ chmod 644 "$XDG_CONFIG_HOME/containers/certs.d/$DISTRIBUTION_REGISTRY_URL/ca.crt
 
 echo "Creating signal file..."
 
-chown -R $TARGET_USR:$TARGET_USR "$XDG_LOCAL_HOME/share/distribution"
 touch "$XDG_LOCAL_HOME/share/distribution/certs-ready-signal"
+chown -R $TARGET_USR:$TARGET_USR "$XDG_LOCAL_HOME/share/distribution"
 chmod 644 "$XDG_LOCAL_HOME/share/distribution/certs-ready-signal"
 
 echo "Registry TLS configuration created and ready for use"
