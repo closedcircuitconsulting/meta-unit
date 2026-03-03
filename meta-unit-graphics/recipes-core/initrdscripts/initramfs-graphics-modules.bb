@@ -3,6 +3,7 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${UNIT_GRAPHICS_LAYERDIR}/LICENSE;md5=a77c12e0c0e8a14cebb1494195720ccc"
 
 SRC_URI:append:raspberrypi3-64 = " file://early-graphics.conf"
+SRC_URI:append:radxa-zero-3e = " file://early-graphics.conf"
 
 RDEPENDS:${PN}:append:raspberrypi3-64 = " \
     kernel-module-rpi-panel-attiny-regulator \
@@ -16,6 +17,21 @@ RDEPENDS:${PN}:append:raspberrypi3-64 = " \
     kernel-module-rpi-backlight \
     kernel-module-backlight \
     kernel-module-panel-simple \
+"
+
+RDEPENDS:${PN}:append:radxa-zero-3e = " \
+    kernel-module-rockchipdrm \
+    kernel-module-dw-mipi-dsi \
+    kernel-module-dw-hdmi \
+    kernel-module-dw-hdmi-qp \
+    kernel-module-dw-hdmi-cec \
+    kernel-module-analogix-dp \
+    kernel-module-drm-display-helper \
+    kernel-module-drm-dma-helper \
+    kernel-module-drm-dp-aux-bus \
+    kernel-module-cec \
+    kernel-module-panfrost \
+    kernel-module-gpu-sched \
 "
 
 S = "${UNPACKDIR}"

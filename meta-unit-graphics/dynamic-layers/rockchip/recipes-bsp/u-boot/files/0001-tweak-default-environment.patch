@@ -1,0 +1,50 @@
+From 97608babec80c5108223b8ea905933468c57fab8 Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Fri, 20 Feb 2026 21:20:18 -0600
+Subject: [PATCH] tweak default environment
+
+- Restrict boot targets to SD card
+- Add custom splash support
+- Disable stdout & stderr vidconsole so it doesn't write over splash
+
+Upstream-Status: Inappropriate [embedded-specific]
+---
+ include/configs/evb_rk3568.h      | 8 ++++++--
+ include/configs/rockchip-common.h | 2 +-
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+diff --git a/include/configs/evb_rk3568.h b/include/configs/evb_rk3568.h
+index 9070160cf58..78209a7f40d 100644
+--- a/include/configs/evb_rk3568.h
++++ b/include/configs/evb_rk3568.h
+@@ -7,8 +7,12 @@
+ #define __EVB_RK3568_H
+ 
+ #define ROCKCHIP_DEVICE_SETTINGS \
+-			"stdout=serial,vidconsole\0" \
+-			"stderr=serial,vidconsole\0"
++			"stdout=serial\0" \
++			"stderr=serial\0" \
++			"splashfile=splashfile=yocto_project_logo_white_800x480_24bpp.bmp.gz\0" \
++			"splashimage=0x12280000\0" \
++			"splashsource=mmc_fs\0" \
++			"splashpos=m,m\0"
+ 
+ #include <configs/rk3568_common.h>
+ 
+diff --git a/include/configs/rockchip-common.h b/include/configs/rockchip-common.h
+index d5550a46575..2cac5d15c68 100644
+--- a/include/configs/rockchip-common.h
++++ b/include/configs/rockchip-common.h
+@@ -14,7 +14,7 @@
+ #ifndef CONFIG_XPL_BUILD
+ 
+ #ifndef BOOT_TARGETS
+-#define BOOT_TARGETS	"mmc1 mmc0 nvme scsi usb pxe dhcp spi"
++#define BOOT_TARGETS	"mmc1 mmc0"
+ #endif
+ 
+ #ifdef CONFIG_ARM64
+-- 
+2.43.0
+
