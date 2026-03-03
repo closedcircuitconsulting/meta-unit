@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Allow plymouthd time to open the DRM device and render the first frame.
+# Without this, switch_root happens before Plymouth has rendered anything
+# and the splash never shows (on some platforms).
+
+plymouthsettle_enabled() {
+    return 0
+}
+
+plymouthsettle_run() {
+    echo "Waiting for for plymouth to settle..."
+    sleep 1
+    echo "Plymouth wait is done"
+}
