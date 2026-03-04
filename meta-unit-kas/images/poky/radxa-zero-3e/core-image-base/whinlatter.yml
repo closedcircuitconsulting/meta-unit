@@ -24,6 +24,3 @@ repos:
       meta-arm-toolchain:
       meta-arm:
       meta-arm-bsp:
-  meta-unit:
-    layers:
-      meta-rockchip-extra:
