@@ -40,7 +40,6 @@ repos:
       meta-python:
   meta-unit:
     layers:
-      meta-rockchip-extra:
       meta-unit-core:
       meta-unit-distro:
       meta-unit-graphics:
