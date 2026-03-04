@@ -12,7 +12,6 @@ header:
     - meta-unit-kas/include/layers/meta-rockchip/remote.yml
     - meta-unit-kas/include/layers/meta-rockchip/main.yml
     - meta-unit-kas/include/layers/meta-rockchip/radxa-zero-3e.yml
-    - meta-unit-kas/include/layers/meta-rockchip/conf.yml
     - meta-unit-kas/include/layers/meta-openembedded/whinlatter.yml
     - meta-unit-kas/include/layers/meta-openembedded/remote.yml
     - meta-unit-kas/include/layers/meta-virtualization/main.yml
