@@ -24,5 +24,5 @@ local_conf_header:
         HALT,${DL_DIR},100M,1K \
         HALT,${SSTATE_DIR},100M,1K \
         HALT,/tmp,10M,1K"
-  systemd: |
-    INIT_MANAGER = "systemd"
+  hash_equivalence: |
+    BB_HASHSERVE_DB_DIR = "${SSTATE_DIR}"

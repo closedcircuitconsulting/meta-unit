@@ -4,4 +4,4 @@ header:
 repos:
   meta-openembedded:
     branch: master
-    commit: 6ba45c1f94e1c2015df940ec9efcd4568346df56
+    commit: d1f51bbd0adf81a65e041ec2afbf8d266eabdf54
