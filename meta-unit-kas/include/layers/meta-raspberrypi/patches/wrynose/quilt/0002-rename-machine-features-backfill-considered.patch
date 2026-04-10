@@ -1,0 +1,42 @@
+From 26d1d5fc920283dce574588919a165890a397e6d Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Fri, 10 Apr 2026 10:27:06 -0500
+Subject: [PATCH 2/2] rename machine features backfill considered
+
+Upstream-Status: Inappropriate [embedded-specific]
+
+---
+ conf/machine/include/rpi-base.inc | 2 +-
+ docs/extra-build-config.md        | 3 +--
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/conf/machine/include/rpi-base.inc b/conf/machine/include/rpi-base.inc
+index 0ae64f8..bbdc652 100644
+--- a/conf/machine/include/rpi-base.inc
++++ b/conf/machine/include/rpi-base.inc
+@@ -129,7 +129,7 @@ KERNEL_IMAGETYPE ?= "${@bb.utils.contains('RPI_USE_U_BOOT', '1', \
+ MACHINE_FEATURES += "apm usbhost keyboard vfat ext2 screen touchscreen alsa bluetooth wifi sdio ${@bb.utils.contains('DISABLE_VC4GRAPHICS', '1', '', 'vc4graphics', d)}"
+ 
+ # Raspberry Pi has no hardware clock
+-MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
++MACHINE_FEATURES_OPTED_OUT = "rtc"
+ 
+ MACHINE_EXTRA_RRECOMMENDS += "kernel-modules udev-rules-rpi"
+ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "${@oe.utils.conditional('ENABLE_I2C', '1', 'kernel-module-i2c-dev kernel-module-i2c-bcm2708', '', d)}"
+diff --git a/docs/extra-build-config.md b/docs/extra-build-config.md
+index 00e0579..26220d5 100644
+--- a/docs/extra-build-config.md
++++ b/docs/extra-build-config.md
+@@ -463,8 +463,7 @@ all, some later boards will come with one).
+ which means that if an attached device is provided for which support is needed,
+ the recommended way forward is to write a new machine configuration based on an
+ existing one. Check the documentation for
+-`MACHINE_FEATURES_BACKFILL_CONSIDERED` for how this is disabled for the
+-relevant machines.
++`MACHINE_FEATURES_OPTED_OUT` for how this is disabled for the relevant machines.
+ 
+ Even when `MACHINE_FEATURES` is tweaked to include the needed `rtc` string,
+ make sure that your kernel configuration is supporting the attached device and
+-- 
+2.43.0
+
