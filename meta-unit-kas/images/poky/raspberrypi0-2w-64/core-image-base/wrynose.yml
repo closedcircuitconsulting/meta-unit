@@ -16,3 +16,9 @@ header:
     - meta-unit-kas/include/layers/meta-raspberrypi/raspberrypi0-2w-64.yml
     - meta-unit-kas/include/layers/meta-raspberrypi/conf.yml
     - meta-unit-kas/include/features/systemd.yml
+    - meta-unit-kas/include/layers/meta-raspberrypi/patches/wrynose/patches.yml
+
+repos:
+  meta-unit:
+    layers:
+      meta-unit-kas:
