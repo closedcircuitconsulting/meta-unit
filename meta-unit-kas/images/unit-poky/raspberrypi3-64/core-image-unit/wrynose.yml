@@ -12,6 +12,7 @@ header:
     - meta-unit-kas/include/layers/meta-raspberrypi/main.yml
     - meta-unit-kas/include/layers/meta-raspberrypi/raspberrypi3-64.yml
     - meta-unit-kas/include/layers/meta-raspberrypi/conf.yml
+    - meta-unit-kas/include/layers/meta-raspberrypi/patches/wrynose/patches.yml
     - meta-unit-kas/include/layers/meta-openembedded/remote.yml
     - meta-unit-kas/include/layers/meta-openembedded/main.yml
     - meta-unit-kas/include/layers/meta-virtualization/remote.yml
@@ -38,6 +39,7 @@ repos:
       meta-unit-core:
       meta-unit-distro:
       meta-unit-graphics:
+      meta-unit-kas:
       meta-unit-profiling:
       meta-unit-users:
       meta-unit-virtualization:

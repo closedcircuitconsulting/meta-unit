@@ -9,4 +9,3 @@ local_conf_header:
     ENABLE_DWC2_HOST = "1"
     ENABLE_SPI_BUS = "1"
     ENABLE_WATCHDOG = "1"
-    PREFERRED_VERSION_linux-raspberrypi ?= "6.12.%"
