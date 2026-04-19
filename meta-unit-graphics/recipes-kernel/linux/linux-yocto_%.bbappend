@@ -2,5 +2,6 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 require unit-graphics.inc
 
-# Replace default linux logo with yocto project logo
-SRC_URI:append = " file://0001-override-kernel-logo.patch"
+SRC_URI:append = " file://0001-add-yocto-kernel-logos.patch"
+
+SRC_URI:append = " file://yocto-kernel-logo-1024x600.cfg"
