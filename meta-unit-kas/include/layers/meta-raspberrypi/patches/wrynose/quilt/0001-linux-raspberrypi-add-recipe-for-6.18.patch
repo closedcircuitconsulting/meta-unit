@@ -1,0 +1,61 @@
+From 2a16b3fa6a5ad4c795c6eaea5af319e569466dc2 Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Fri, 10 Apr 2026 23:58:54 -0500
+Subject: [PATCH] linux-raspberrypi: add recipe for 6.18
+
+---
+ conf/machine/include/rpi-default-versions.inc |  2 +-
+ .../linux/linux-raspberrypi_6.18.bb           | 31 +++++++++++++++++++
+ 2 files changed, 32 insertions(+), 1 deletion(-)
+ create mode 100644 recipes-kernel/linux/linux-raspberrypi_6.18.bb
+
+diff --git a/conf/machine/include/rpi-default-versions.inc b/conf/machine/include/rpi-default-versions.inc
+index 8e3e9be..d2562a0 100644
+--- a/conf/machine/include/rpi-default-versions.inc
++++ b/conf/machine/include/rpi-default-versions.inc
+@@ -1,4 +1,4 @@
+ # RaspberryPi BSP default versions
+ 
+-PREFERRED_VERSION_linux-raspberrypi ??= "6.12.%"
++PREFERRED_VERSION_linux-raspberrypi ??= "6.18.%"
+ PREFERRED_VERSION_linux-raspberrypi-v7 ??= "${PREFERRED_VERSION_linux-raspberrypi}"
+diff --git a/recipes-kernel/linux/linux-raspberrypi_6.18.bb b/recipes-kernel/linux/linux-raspberrypi_6.18.bb
+new file mode 100644
+index 0000000..483e4fb
+--- /dev/null
++++ b/recipes-kernel/linux/linux-raspberrypi_6.18.bb
+@@ -0,0 +1,31 @@
++LINUX_VERSION ?= "6.18.21"
++LINUX_RPI_BRANCH ?= "rpi-6.18.y"
++LINUX_RPI_KMETA_BRANCH ?= "yocto-6.18"
++
++SRCREV_machine = "8fa1bed551103360706eb33260ed6130e67f7816"
++SRCREV_meta = "8af6e86ecd97388ecbae830d484445146a2a2159"
++
++KMETA = "kernel-meta"
++
++SRC_URI = " \
++    git://github.com/raspberrypi/linux.git;name=machine;branch=${LINUX_RPI_BRANCH};protocol=https \
++    git://git.yoctoproject.org/yocto-kernel-cache;type=kmeta;name=meta;branch=${LINUX_RPI_KMETA_BRANCH};destsuffix=${KMETA} \
++    file://powersave.cfg \
++    file://android-drivers.cfg \
++    "
++
++require linux-raspberrypi.inc
++
++KERNEL_DTC_FLAGS += "-@ -H epapr"
++
++RDEPENDS:${KERNEL_PACKAGE_NAME}:raspberrypi-armv7:append = " ${RASPBERRYPI_v7_KERNEL_PACKAGE_NAME}"
++RDEPENDS:${KERNEL_PACKAGE_NAME}-base:raspberrypi-armv7:append = " ${RASPBERRYPI_v7_KERNEL_PACKAGE_NAME}-base"
++RDEPENDS:${KERNEL_PACKAGE_NAME}-image:raspberrypi-armv7:append = " ${RASPBERRYPI_v7_KERNEL_PACKAGE_NAME}-image"
++RDEPENDS:${KERNEL_PACKAGE_NAME}-dev:raspberrypi-armv7:append = " ${RASPBERRYPI_v7_KERNEL_PACKAGE_NAME}-dev"
++RDEPENDS:${KERNEL_PACKAGE_NAME}-vmlinux:raspberrypi-armv7:append = " ${RASPBERRYPI_v7_KERNEL_PACKAGE_NAME}-vmlinux"
++RDEPENDS:${KERNEL_PACKAGE_NAME}-modules:raspberrypi-armv7:append = " ${RASPBERRYPI_v7_KERNEL_PACKAGE_NAME}-modules"
++RDEPENDS:${KERNEL_PACKAGE_NAME}-dbg:raspberrypi-armv7:append = " ${RASPBERRYPI_v7_KERNEL_PACKAGE_NAME}-dbg"
++
++DEPLOYDEP = ""
++DEPLOYDEP:raspberrypi-armv7 = "${RASPBERRYPI_v7_KERNEL}:do_deploy"
++do_deploy[depends] += "${DEPLOYDEP}"
+-- 
+2.43.0
+

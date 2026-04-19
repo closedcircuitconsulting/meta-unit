@@ -1,9 +1,0 @@
-header:
-  version: 20
-
-repos:
-  meta-freescale-3rdparty:
-    patches:
-      quilt:
-        repo: meta-unit
-        path: meta-unit-kas/include/layers/meta-freescale-3rdparty/patches/whinlatter/quilt/

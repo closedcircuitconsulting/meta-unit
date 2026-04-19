@@ -1,9 +1,0 @@
-header:
-  version: 20
-
-repos:
-  bitbake:
-    branch: "2.16"
-    commit: 7af7e04f3adc8ba144d9e2e6b37ed4ddb3b59df0
-    layers:
-      bitbake: disabled

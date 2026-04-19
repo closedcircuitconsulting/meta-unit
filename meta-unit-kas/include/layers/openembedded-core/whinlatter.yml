@@ -1,7 +1,0 @@
-header:
-  version: 20
-
-repos:
-  openembedded-core:
-    branch: whinlatter
-    commit: 45cba1329d541fdc5857d6df2624b34c91133f7a
