@@ -1,19 +1,40 @@
-From a103fc199ca4929dd0792cd56c997809ca2cce19 Mon Sep 17 00:00:00 2001
+From 7eb628bb44f137eb2703721df5df3e08191cd37a Mon Sep 17 00:00:00 2001
 From: unitexe <unitexe70@gmail.com>
-Date: Sat, 18 Apr 2026 10:34:38 -0500
+Date: Sat, 18 Apr 2026 23:26:45 -0500
 Subject: [PATCH] add yocto kernel logos
+
+- one to fill a 800x480 screen
+- the other to fill a 1024x600 screen
 
 Upstream-Status: Inappropriate [embedded-specific]
 ---
+ drivers/video/logo/Kconfig                    |     8 +
  drivers/video/logo/Makefile                   |     2 +
  drivers/video/logo/logo.c                     |     8 +
  .../logo/logo_yocto_1024_x_600_clut224.ppm    | 74307 ++++++++++++++++
  .../logo/logo_yocto_800_x_480_clut224.ppm     | 45453 ++++++++++
  include/linux/linux_logo.h                    |     2 +
- 5 files changed, 119772 insertions(+)
+ 6 files changed, 119780 insertions(+)
  create mode 100644 drivers/video/logo/logo_yocto_1024_x_600_clut224.ppm
  create mode 100644 drivers/video/logo/logo_yocto_800_x_480_clut224.ppm
 
+diff --git a/drivers/video/logo/Kconfig b/drivers/video/logo/Kconfig
+index ce6bb753522d..7634ab5de08f 100644
+--- a/drivers/video/logo/Kconfig
++++ b/drivers/video/logo/Kconfig
+@@ -70,4 +70,12 @@ config LOGO_SUPERH_CLUT224
+ 	depends on SUPERH
+ 	default y
+ 
++config LOGO_YOCTO_800_X_480_CLUT224
++	bool "224-color Yocto logo that fills 800x480 screens"
++	default n
++
++config LOGO_YOCTO_1024_X_600_CLUT224
++	bool "224-color Yocto logo that fills 1024x600 screens"
++	default n
++
+ endif # LOGO
 diff --git a/drivers/video/logo/Makefile b/drivers/video/logo/Makefile
 index 895c60b8402e..a1440d98d565 100644
 --- a/drivers/video/logo/Makefile
