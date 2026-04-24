@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-yocto:
+    branch: wrynose
+    commit: 904846ae078ee20de073040ebb77c86e19250f56

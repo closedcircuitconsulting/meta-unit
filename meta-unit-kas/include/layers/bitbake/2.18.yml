@@ -1,0 +1,9 @@
+header:
+  version: 20
+
+repos:
+  bitbake:
+    branch: "2.18"
+    commit: 33581c84f3a85008239acbd940501a35de48dc91
+    layers:
+      bitbake: disabled
