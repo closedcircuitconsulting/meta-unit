@@ -4,6 +4,6 @@ header:
 repos:
   bitbake:
     branch: "2.18"
-    commit: a2dd9be788274d9c7280be5b1be5eb5c3990cf54
+    commit: 22021758e66737bcf68dfd2b74adc6a0cb1d42d9
     layers:
       bitbake: disabled
