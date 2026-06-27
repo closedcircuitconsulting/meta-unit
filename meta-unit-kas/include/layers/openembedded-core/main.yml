@@ -4,4 +4,4 @@ header:
 repos:
   openembedded-core:
     branch: master
-    commit: a64b4f39724c13de3cc5098dbcbcb4fb8a40dbac
+    commit: d595615c6a027b80d6f7ea80ab25e85e97b2436f
