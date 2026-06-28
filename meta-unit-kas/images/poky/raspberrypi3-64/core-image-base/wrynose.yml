@@ -15,11 +15,11 @@ header:
     - meta-unit-kas/include/layers/meta-raspberrypi/main.yml
     - meta-unit-kas/include/layers/meta-raspberrypi/raspberrypi3-64.yml
     - meta-unit-kas/include/layers/meta-raspberrypi/conf.yml
-    - meta-unit-kas/include/layers/meta-raspberrypi/patches/wrynose/patches.yml
     - meta-unit-kas/include/features/ssh.yml
     - meta-unit-kas/include/features/systemd.yml
 
 repos:
   meta-unit:
     layers:
+      meta-raspberrypi-extra:
       meta-unit-kas:
