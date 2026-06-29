@@ -16,6 +16,7 @@ header:
     - meta-unit-kas/include/layers/meta-raspberrypi/raspberrypi0-2w-64.yml
     - meta-unit-kas/include/layers/meta-raspberrypi/conf.yml
     - meta-unit-kas/include/features/systemd.yml
+    - meta-unit-kas/include/features/sdk.yml
 
 repos:
   meta-unit:
