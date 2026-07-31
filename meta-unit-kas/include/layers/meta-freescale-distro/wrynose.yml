@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-freescale-distro:
+    branch: wrynose
+    commit: 4464f38b4aa618b5942f5e35dd25cff590f410a6

@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-virtualization:
+    branch: wrynose
+    commit: d7b0cd1e5f0f28aec111137f4490763d5db01fd6

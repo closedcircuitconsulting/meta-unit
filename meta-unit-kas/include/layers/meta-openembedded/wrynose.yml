@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-openembedded:
+    branch: wrynose
+    commit: af8b6d6b2f0b11595b0a0d5b82efa3129d52a628

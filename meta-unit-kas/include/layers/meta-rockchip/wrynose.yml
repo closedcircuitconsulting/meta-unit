@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-rockchip:
+    branch: wrynose
+    commit: 9d02575bfd9ca5e87c394f593f2bbdbdee914d4e

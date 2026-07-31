@@ -1,0 +1,7 @@
+header:
+  version: 20
+
+repos:
+  meta-raspberrypi:
+    branch: wrynose
+    commit: f62c67921474370829d24a4fa01ef88543f3906b
