@@ -1,0 +1,28 @@
+header:
+  version: 20
+  includes:
+    - meta-unit-kas/include/build/conf.yml
+    - meta-unit-kas/include/layers/bitbake/2.18.yml
+    - meta-unit-kas/include/layers/bitbake/remote.yml
+    - meta-unit-kas/include/layers/openembedded-core/wrynose.yml
+    - meta-unit-kas/include/layers/openembedded-core/remote.yml
+    - meta-unit-kas/include/layers/openembedded-core/core-image-base.yml
+    - meta-unit-kas/include/layers/openembedded-core/passwordless-root-login.yml
+    - meta-unit-kas/include/layers/meta-yocto/wrynose.yml
+    - meta-unit-kas/include/layers/meta-yocto/remote.yml
+    - meta-unit-kas/include/layers/meta-yocto/poky.yml
+    - meta-unit-kas/include/layers/meta-arm/remote.yml
+    - meta-unit-kas/include/layers/meta-arm/wrynose.yml
+    - meta-unit-kas/include/layers/meta-rockchip/remote.yml
+    - meta-unit-kas/include/layers/meta-rockchip/wrynose.yml
+    - meta-unit-kas/include/layers/meta-rockchip/rock-pi-4b.yml
+    - meta-unit-kas/include/features/ssh.yml
+    - meta-unit-kas/include/features/systemd.yml
+    - meta-unit-kas/include/features/sdk.yml
+
+repos:
+  meta-arm:
+    layers:
+      meta-arm-toolchain:
+      meta-arm:
+      meta-arm-bsp:
