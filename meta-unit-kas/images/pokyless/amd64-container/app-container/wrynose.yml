@@ -3,14 +3,14 @@ header:
   includes:
     - meta-unit-kas/include/layers/bitbake/2.18.yml
     - meta-unit-kas/include/layers/bitbake/remote.yml
-    - meta-unit-kas/include/layers/openembedded-core/main.yml
+    - meta-unit-kas/include/layers/openembedded-core/wrynose.yml
     - meta-unit-kas/include/layers/openembedded-core/remote.yml
-    - meta-unit-kas/include/layers/meta-yocto/main.yml
+    - meta-unit-kas/include/layers/meta-yocto/wrynose.yml
     - meta-unit-kas/include/layers/meta-yocto/remote.yml
     - meta-unit-kas/include/layers/meta-openembedded/remote.yml
-    - meta-unit-kas/include/layers/meta-openembedded/main.yml
+    - meta-unit-kas/include/layers/meta-openembedded/wrynose.yml
     - meta-unit-kas/include/layers/meta-virtualization/remote.yml
-    - meta-unit-kas/include/layers/meta-virtualization/main.yml
+    - meta-unit-kas/include/layers/meta-virtualization/wrynose.yml
     - meta-unit-kas/include/layers/meta-virtualization/app-container.yml
     - meta-unit-kas/include/layers/meta-virtualization-extra/amd64-container.yml
     - meta-unit-kas/include/layers/meta-virtualization-extra/pokyless.yml

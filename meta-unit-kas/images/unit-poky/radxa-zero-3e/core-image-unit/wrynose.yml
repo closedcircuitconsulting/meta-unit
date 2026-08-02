@@ -4,21 +4,21 @@ header:
     - meta-unit-kas/include/build/conf.yml
     - meta-unit-kas/include/layers/bitbake/2.18.yml
     - meta-unit-kas/include/layers/bitbake/remote.yml
-    - meta-unit-kas/include/layers/openembedded-core/main.yml
+    - meta-unit-kas/include/layers/openembedded-core/wrynose.yml
     - meta-unit-kas/include/layers/openembedded-core/remote.yml
-    - meta-unit-kas/include/layers/meta-yocto/main.yml
+    - meta-unit-kas/include/layers/meta-yocto/wrynose.yml
     - meta-unit-kas/include/layers/meta-yocto/remote.yml
     - meta-unit-kas/include/layers/meta-arm/remote.yml
-    - meta-unit-kas/include/layers/meta-arm/main.yml
+    - meta-unit-kas/include/layers/meta-arm/wrynose.yml
     - meta-unit-kas/include/layers/meta-rockchip/remote.yml
-    - meta-unit-kas/include/layers/meta-rockchip/main.yml
+    - meta-unit-kas/include/layers/meta-rockchip/wrynose.yml
     - meta-unit-kas/include/layers/meta-rockchip/radxa-zero-3e.yml
-    - meta-unit-kas/include/layers/meta-openembedded/main.yml
+    - meta-unit-kas/include/layers/meta-openembedded/wrynose.yml
     - meta-unit-kas/include/layers/meta-openembedded/remote.yml
-    - meta-unit-kas/include/layers/meta-virtualization/main.yml
+    - meta-unit-kas/include/layers/meta-virtualization/wrynose.yml
     - meta-unit-kas/include/layers/meta-virtualization/remote.yml
     - meta-unit-kas/include/layers/meta-flutter/remote.yml
-    - meta-unit-kas/include/layers/meta-flutter/main.yml
+    - meta-unit-kas/include/layers/meta-flutter/wrynose.yml
     - meta-unit-kas/include/layers/meta-unit-core/core-image-unit.yml
     - meta-unit-kas/include/layers/meta-unit-distro/unit-poky.yml
 
