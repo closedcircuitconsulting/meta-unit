@@ -10,7 +10,6 @@ RDEPENDS:${PN}:append = " base-passwd"
 RDEPENDS:${PN}:append = " busybox"
 RDEPENDS:${PN}:append = " sudo"
 RDEPENDS:${PN}:append = " shadow"
-RDEPENDS:${PN}:append = " ssh-authorized-keys"
 RDEPENDS:${PN}:append = " systemd"
 
 USERADD_PACKAGES = "${PN}"
