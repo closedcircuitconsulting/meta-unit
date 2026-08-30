@@ -4,4 +4,4 @@ header:
 repos:
   openembedded-core:
     branch: wrynose
-    commit: f09a0f28aeb54ddd90415dd458338e1565bb5a49
+    commit: f7397af248e1e338929d70a910b0fbc2341528ec
