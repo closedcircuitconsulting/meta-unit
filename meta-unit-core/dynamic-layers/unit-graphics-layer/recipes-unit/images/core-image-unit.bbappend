@@ -2,6 +2,7 @@ inherit fix-kiosk-home-dir-ownership
 inherit mask-tty1-getty
 
 IMAGE_FEATURES:append = " hwcodecs"
+IMAGE_FEATURES:append:radxa-zero-3e = " boot-splash"
 
 IMAGE_INSTALL:append = " packagegroup-unit-kiosk"
 IMAGE_INSTALL:append = " ${@bb.utils.contains('IMAGE_FEATURES', 'splash', 'packagegroup-unit-splash', '', d)}"

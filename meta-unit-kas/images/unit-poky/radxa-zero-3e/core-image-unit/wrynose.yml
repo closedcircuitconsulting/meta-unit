@@ -17,8 +17,6 @@ header:
     - meta-unit-kas/include/layers/meta-openembedded/remote.yml
     - meta-unit-kas/include/layers/meta-virtualization/wrynose.yml
     - meta-unit-kas/include/layers/meta-virtualization/remote.yml
-    - meta-unit-kas/include/layers/meta-flutter/remote.yml
-    - meta-unit-kas/include/layers/meta-flutter/wrynose.yml
     - meta-unit-kas/include/layers/meta-unit-core/core-image-unit.yml
     - meta-unit-kas/include/layers/meta-unit-distro/unit-poky.yml
 
@@ -28,10 +26,6 @@ repos:
       meta-arm-toolchain:
       meta-arm:
       meta-arm-bsp:
-  meta-flutter:
-    layers:
-      .:
-      meta-flutter-apps:
   meta-openembedded:
     layers:
       meta-filesystems:
@@ -42,7 +36,6 @@ repos:
     layers:
       meta-unit-core:
       meta-unit-distro:
-      meta-unit-graphics:
       meta-unit-profiling:
       meta-unit-users:
       meta-unit-virtualization:
