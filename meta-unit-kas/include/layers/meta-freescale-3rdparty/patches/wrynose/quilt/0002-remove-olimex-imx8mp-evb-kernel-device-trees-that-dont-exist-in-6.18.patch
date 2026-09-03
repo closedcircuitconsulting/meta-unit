@@ -1,0 +1,37 @@
+From 2fbe7abb840a63e4c88b098def30fa4f8088c50f Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Wed, 2 Sep 2026 23:34:04 -0500
+Subject: [PATCH] remove olimex-imx8mp-evb kernel device trees that dont exist
+ in 6.18
+
+- `imx8mp-evk-rpmsg-lpv.dtb` was removed in commit cc134e6553f1
+- `imx8mp-evk-pcie-ep` was converted to `.dtso` and then consolidated to shared `imx-pcie0-ep.dtso` in commit 1c9b0c6044c2
+- `imx8mp-evk-usdhc1-m2` was folded into base evk dts in commit a636cb2f5f37
+---
+ conf/machine/olimex-imx8mp-evb.conf | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/conf/machine/olimex-imx8mp-evb.conf b/conf/machine/olimex-imx8mp-evb.conf
+index 6acc656..394ab49 100644
+--- a/conf/machine/olimex-imx8mp-evb.conf
++++ b/conf/machine/olimex-imx8mp-evb.conf
+@@ -33,16 +33,13 @@ KERNEL_DEVICETREE:append:use-nxp-bsp = " \
+     freescale/imx8mp-evk-os08a20-ov5640.dtb \
+     freescale/imx8mp-evk-ov2775.dtb \
+     freescale/imx8mp-evk-ov2775-ov5640.dtb \
+-    freescale/imx8mp-evk-pcie-ep.dtb \
+     freescale/imx8mp-evk-revA3-8mic-revE.dtb \
+     freescale/imx8mp-evk-rm67191.dtb \
+     freescale/imx8mp-evk-rm67199.dtb \
+     freescale/imx8mp-evk-root.dtb \
+     freescale/imx8mp-evk-rpmsg.dtb \
+-    freescale/imx8mp-evk-rpmsg-lpv.dtb \
+     freescale/imx8mp-evk-sof-wm8960.dtb \
+     freescale/imx8mp-evk-spdif-lb.dtb \
+-    freescale/imx8mp-evk-usdhc1-m2.dtb \
+     freescale/imx8mp-evk-8mic-swpdm.dtb \
+     freescale/imx8mp-olimex.dtb \
+ "
+-- 
+2.43.0
+

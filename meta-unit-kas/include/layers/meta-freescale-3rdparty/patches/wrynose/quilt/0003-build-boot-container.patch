@@ -1,0 +1,22 @@
+From 1ac2626fb498364263a3a5d8584acf26ae5fe4ed Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Thu, 3 Sep 2026 00:16:52 -0500
+Subject: [PATCH] build boot container
+
+---
+ conf/machine/olimex-imx8mp-evb.conf | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/conf/machine/olimex-imx8mp-evb.conf b/conf/machine/olimex-imx8mp-evb.conf
+index 394ab49..2f0e034 100644
+--- a/conf/machine/olimex-imx8mp-evb.conf
++++ b/conf/machine/olimex-imx8mp-evb.conf
+@@ -67,3 +67,5 @@ IMXBOOT_TARGETS_BASENAME = "flash_evk"
+ # Also this machine isn't supported by u-boot-fslc but imx8mn-evk.inc already
+ # set the bootloader to u-boot-imx instead when NXP BSP is used.
+ IMX_DEFAULT_BSP = "nxp"
++
++UBOOT_PROVIDES_BOOT_CONTAINER:mx8m-generic-bsp = "0"
+-- 
+2.43.0
+
