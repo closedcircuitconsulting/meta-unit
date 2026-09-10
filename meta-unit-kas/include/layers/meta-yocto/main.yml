@@ -4,4 +4,4 @@ header:
 repos:
   meta-yocto:
     branch: master
-    commit: 6ce984c0a3a68c2fdc3c32bc185b6729d09e7829
+    commit: 7e41504cd63b099b214f10d92cfdaf358ab98c5f
