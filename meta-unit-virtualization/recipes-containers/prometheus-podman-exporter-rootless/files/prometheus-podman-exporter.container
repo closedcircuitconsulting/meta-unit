@@ -11,6 +11,7 @@ Volume=%t/podman/podman.sock:/run/podman/podman.sock:ro
 Environment=CONTAINER_HOST=unix:///run/podman/podman.sock
 PodmanArgs=--userns=keep-id:uid=65534
 Exec=--collector.enable-all
+Mount=type=tmpfs,destination=/home/.config,tmpfs-mode=0700,chown
 
 [Service]
 Restart=on-failure
