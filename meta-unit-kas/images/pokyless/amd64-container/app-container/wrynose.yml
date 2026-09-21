@@ -1,5 +1,5 @@
 header:
-  version: 20
+  version: 23
   includes:
     - meta-unit-kas/include/layers/bitbake/2.18.yml
     - meta-unit-kas/include/layers/bitbake/remote.yml
