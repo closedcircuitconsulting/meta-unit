@@ -26,3 +26,5 @@ local_conf_header:
         HALT,/tmp,10M,1K"
   hash_equivalence: |
     BB_HASHSERVE_DB_DIR = "${SSTATE_DIR}"
+  reduce_diskspace: |
+    INHERIT += "rm_work"
