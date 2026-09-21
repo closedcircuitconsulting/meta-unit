@@ -22,4 +22,5 @@ header:
 repos:
   meta-unit:
     layers:
+      meta-raspberrypi-extra:
       meta-unit-kas:
