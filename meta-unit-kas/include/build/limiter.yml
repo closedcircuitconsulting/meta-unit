@@ -1,0 +1,7 @@
+header:
+  version: 23
+
+local_conf_header:
+  limiter: |
+    PARALLEL_MAKE = "-j 8"
+    BB_NUMBER_THREADS = "16"
