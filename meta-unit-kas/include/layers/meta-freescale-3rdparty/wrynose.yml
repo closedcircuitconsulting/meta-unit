@@ -4,4 +4,4 @@ header:
 repos:
   meta-freescale-3rdparty:
     branch: wrynose
-    commit: 26d8b36a72acf1458a2520e4e9f4d654a4ba77e4
+    commit: 7e3ed43df05bb1218d4768f5396a9d9af66b3ec4

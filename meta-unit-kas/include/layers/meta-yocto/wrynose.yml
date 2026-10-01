@@ -4,4 +4,4 @@ header:
 repos:
   meta-yocto:
     branch: wrynose
-    commit: 1b132647002eea43a2c7a7f857f63f42dacbc26c
+    commit: 7c25b11156553145fa6b241a2d4f65d94438f804

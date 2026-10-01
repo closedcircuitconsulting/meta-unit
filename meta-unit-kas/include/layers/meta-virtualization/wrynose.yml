@@ -4,4 +4,4 @@ header:
 repos:
   meta-virtualization:
     branch: wrynose
-    commit: 70a5d5a65d7237cfe978961fa4d8765c895cddc8
+    commit: a07bf78dab0d46099a7e6ca8b2aadb07535efc13

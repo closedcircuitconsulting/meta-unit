@@ -4,4 +4,4 @@ header:
 repos:
   meta-openembedded:
     branch: wrynose
-    commit: 14282a02be9c74a1276a7cda7d6c89e054699a11
+    commit: 47d7dbdd10890bbd429bc0cccbe14435c37e5af1
