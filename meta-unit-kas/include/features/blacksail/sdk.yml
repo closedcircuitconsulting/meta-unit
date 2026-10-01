@@ -1,0 +1,6 @@
+header:
+  version: 23
+
+local_conf_header:
+  sdk: |
+    SDK_FEATURES:append = " rust"

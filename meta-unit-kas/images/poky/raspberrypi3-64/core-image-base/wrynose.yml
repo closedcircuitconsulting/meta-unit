@@ -17,7 +17,7 @@ header:
     - meta-unit-kas/include/layers/meta-raspberrypi/conf.yml
     - meta-unit-kas/include/features/ssh.yml
     - meta-unit-kas/include/features/systemd.yml
-    - meta-unit-kas/include/features/sdk.yml
+    - meta-unit-kas/include/features/wrynose/sdk.yml
 
 repos:
   meta-unit:
