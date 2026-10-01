@@ -1,0 +1,7 @@
+header:
+  version: 23
+
+repos:
+  meta-openembedded:
+    branch: blacksail
+    commit: d50511530a43bb16d1955b84ee4494830b3fe0ec

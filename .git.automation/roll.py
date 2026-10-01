@@ -17,6 +17,8 @@ from ruamel.yaml.scalarstring import PlainScalarString
 
 BRANCH_FILE_NAMES = [
     "2.18.yml",
+    "2.20.yml",
+    "blacksail.yml",
     "main.yml",
     "wrynose.yml",
 ]

@@ -1,0 +1,7 @@
+header:
+  version: 23
+
+repos:
+  meta-yocto:
+    branch: blacksail
+    commit: 43946d08974e61361f6313ae348c5d87c12be934
