@@ -18,7 +18,6 @@ header:
     - meta-unit-kas/include/layers/meta-rockchip/rock-pi-4b.yml
     - meta-unit-kas/include/features/ssh.yml
     - meta-unit-kas/include/features/systemd.yml
-    - meta-unit-kas/include/features/wrynose/sdk.yml
 
 repos:
   meta-arm:

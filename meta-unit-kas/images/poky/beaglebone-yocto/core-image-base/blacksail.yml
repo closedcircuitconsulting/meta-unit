@@ -14,4 +14,3 @@ header:
     - meta-unit-kas/include/layers/meta-yocto/beaglebone-yocto.yml
     - meta-unit-kas/include/features/ssh.yml
     - meta-unit-kas/include/features/systemd.yml
-    - meta-unit-kas/include/features/blacksail/sdk.yml
