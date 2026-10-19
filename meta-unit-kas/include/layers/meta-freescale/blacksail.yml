@@ -1,0 +1,7 @@
+header:
+  version: 23
+
+repos:
+  meta-freescale:
+    branch: blacksail
+    commit: 2c5a3291df2576c6d3ce7b0b4e8b557d54090c99
