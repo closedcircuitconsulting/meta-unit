@@ -4,4 +4,4 @@ header:
 repos:
   meta-freescale-distro:
     branch: master
-    commit: 452a7b17ca0350ec1684b63eee573def06dd12b5
+    commit: a742c2f6dd5123b3c2615b7e0909e35bd2379af4

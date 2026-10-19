@@ -4,4 +4,4 @@ header:
 repos:
   openembedded-core:
     branch: blacksail
-    commit: 419c1b0f1ed0e3ce22b1022061f763d007883121
+    commit: e182a0c4b91fd459c1f9dece0c7c23f7f9eaa7ab

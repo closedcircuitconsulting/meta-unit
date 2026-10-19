@@ -4,4 +4,4 @@ header:
 repos:
   meta-yocto:
     branch: blacksail
-    commit: 43946d08974e61361f6313ae348c5d87c12be934
+    commit: d0119aa2eb77b985fcd33ac527d5c0287eb68e58

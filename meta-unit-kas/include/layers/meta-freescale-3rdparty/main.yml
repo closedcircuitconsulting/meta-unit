@@ -4,4 +4,4 @@ header:
 repos:
   meta-freescale-3rdparty:
     branch: master
-    commit: 12ffc294979bc3139990c71e830090a13788cee7
+    commit: 720910c01cf9a9e921473cf9c4f1fb9eab97c0e0
