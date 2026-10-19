@@ -1,8 +1,17 @@
+From 1d30c28b199eff2bd37bd89547aa35b9f75d1860 Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Mon, 19 Oct 2026 10:06:05 -0500
+Subject: [PATCH] follow imx boot container builddir change for olimex u-boot
+
+---
+ recipes-bsp/u-boot/u-boot-olimex_2024.04.bb | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
 diff --git a/recipes-bsp/u-boot/u-boot-olimex_2024.04.bb b/recipes-bsp/u-boot/u-boot-olimex_2024.04.bb
-index 01c121f..e35fff2 100644
+index 97245bc..48b0d36 100644
 --- a/recipes-bsp/u-boot/u-boot-olimex_2024.04.bb
 +++ b/recipes-bsp/u-boot/u-boot-olimex_2024.04.bb
-@@ -25,11 +25,13 @@ do_deploy:append:mx8m-generic-bsp() {
+@@ -31,11 +31,13 @@ do_deploy:append:mx8m-generic-bsp() {
          for config in ${UBOOT_MACHINE}; do
              i=$(expr $i + 1);
              for type in ${UBOOT_CONFIG}; do
@@ -17,7 +26,7 @@ index 01c121f..e35fff2 100644
                      UBOOT_DTB_NAME_FLAGS="${type}:${UBOOT_DTB_NAME}"
                      for key_value in ${UBOOT_DTB_NAME_FLAGS}; do
                          local type_key="${key_value%%:*}"
-@@ -39,11 +41,11 @@ do_deploy:append:mx8m-generic-bsp() {
+@@ -45,11 +47,11 @@ do_deploy:append:mx8m-generic-bsp() {
                              bbnote "UBOOT_CONFIG = $type, UBOOT_DTB_NAME = $dtb_name"
                              # There is only one ${dtb_name}, the first one. All the other are with the type appended
                              if [ ! -f "${DEPLOYDIR}/${BOOT_TOOLS}/${dtb_name}" ]; then
@@ -31,3 +40,6 @@ index 01c121f..e35fff2 100644
                          fi
                          unset type_key
                          unset dtb_name
+-- 
+2.43.0
+
