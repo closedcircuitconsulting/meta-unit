@@ -1,0 +1,6 @@
+header:
+  version: 23
+
+local_conf_header:
+  sdk-flutter: |
+    TOOLCHAIN_HOST_TASK:append = " nativesdk-flutter-sdk"

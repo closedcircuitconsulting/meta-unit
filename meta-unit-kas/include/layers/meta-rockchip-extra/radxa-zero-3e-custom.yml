@@ -1,0 +1,4 @@
+header:
+  version: 23
+
+machine: radxa-zero-3e-custom

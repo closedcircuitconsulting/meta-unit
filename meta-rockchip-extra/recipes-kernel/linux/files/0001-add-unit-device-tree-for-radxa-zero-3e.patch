@@ -1,0 +1,52 @@
+From 2deb7499f39d841bf4de033679e1a5e17bbcb06c Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Sun, 18 Oct 2026 19:50:39 -0500
+Subject: [PATCH] add unit device tree for radxa-zero-3e
+
+Upstream-Status: Inappropriate [embedded-specific]
+---
+ arch/arm64/boot/dts/rockchip/Makefile                      | 1 +
+ arch/arm64/boot/dts/rockchip/rk3566-radxa-zero-3e-unit.dts | 6 ++++++
+ arch/arm64/boot/dts/rockchip/rk356x-base-enable-pwm14.dtsi | 5 +++++
+ 3 files changed, 12 insertions(+)
+ create mode 100644 arch/arm64/boot/dts/rockchip/rk3566-radxa-zero-3e-unit.dts
+ create mode 100644 arch/arm64/boot/dts/rockchip/rk356x-base-enable-pwm14.dtsi
+
+diff --git a/arch/arm64/boot/dts/rockchip/Makefile b/arch/arm64/boot/dts/rockchip/Makefile
+index 761d82b4f4f2..3cb6b4abf59c 100644
+--- a/arch/arm64/boot/dts/rockchip/Makefile
++++ b/arch/arm64/boot/dts/rockchip/Makefile
+@@ -123,6 +123,7 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-quartz64-a.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-quartz64-b.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-radxa-cm3-io.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-radxa-zero-3e.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-radxa-zero-3e-unit.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-radxa-zero-3w.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-roc-pc.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-rock-3c.dtb
+diff --git a/arch/arm64/boot/dts/rockchip/rk3566-radxa-zero-3e-unit.dts b/arch/arm64/boot/dts/rockchip/rk3566-radxa-zero-3e-unit.dts
+new file mode 100644
+index 000000000000..947a4a2a81e2
+--- /dev/null
++++ b/arch/arm64/boot/dts/rockchip/rk3566-radxa-zero-3e-unit.dts
+@@ -0,0 +1,6 @@
++// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
++
++/dts-v1/;
++
++#include "rk3566-radxa-zero-3e.dts"
++#include "rk356x-base-enable-pwm14.dtsi"
+diff --git a/arch/arm64/boot/dts/rockchip/rk356x-base-enable-pwm14.dtsi b/arch/arm64/boot/dts/rockchip/rk356x-base-enable-pwm14.dtsi
+new file mode 100644
+index 000000000000..0518443794e1
+--- /dev/null
++++ b/arch/arm64/boot/dts/rockchip/rk356x-base-enable-pwm14.dtsi
+@@ -0,0 +1,5 @@
++// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
++
++&pwm14 {
++    status = "okay";
++};
+-- 
+2.43.0
+
