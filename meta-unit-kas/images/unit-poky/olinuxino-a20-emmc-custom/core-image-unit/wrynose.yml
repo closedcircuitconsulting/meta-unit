@@ -16,7 +16,7 @@ header:
     - meta-unit-kas/include/layers/meta-sunxi/remote.yml
     - meta-unit-kas/include/layers/meta-sunxi/main.yml
     - meta-unit-kas/include/layers/meta-sunxi/patches/wrynose/patches.yml
-    - meta-unit-kas/include/layers/meta-sunxi-extra/olinuxino-a20-emmc.yml
+    - meta-unit-kas/include/layers/meta-sunxi-extra/olinuxino-a20-emmc-custom.yml
     - meta-unit-kas/include/layers/meta-virtualization/wrynose.yml
     - meta-unit-kas/include/layers/meta-virtualization/remote.yml
     - meta-unit-kas/include/layers/meta-unit-core/core-image-unit.yml

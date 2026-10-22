@@ -1,0 +1,4 @@
+header:
+  version: 23
+
+machine: olinuxino-a20-emmc-custom

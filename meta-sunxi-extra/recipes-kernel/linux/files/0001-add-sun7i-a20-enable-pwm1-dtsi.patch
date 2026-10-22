@@ -1,0 +1,26 @@
+From ffd085d4f9d7bf792945a658fa964b7fa9660d7f Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Wed, 21 Oct 2026 21:43:19 -0500
+Subject: [PATCH 1/2] add sun7i a20 enable pwm1 dtsi
+
+Upstream-Status: Inappropriate [embedded-specific]
+
+---
+ arch/arm/boot/dts/allwinner/sun7i-a20-enable-pwm1.dtsi | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 arch/arm/boot/dts/allwinner/sun7i-a20-enable-pwm1.dtsi
+
+diff --git a/arch/arm/boot/dts/allwinner/sun7i-a20-enable-pwm1.dtsi b/arch/arm/boot/dts/allwinner/sun7i-a20-enable-pwm1.dtsi
+new file mode 100644
+index 000000000000..d515827454f7
+--- /dev/null
++++ b/arch/arm/boot/dts/allwinner/sun7i-a20-enable-pwm1.dtsi
+@@ -0,0 +1,5 @@
++&pwm {
++	pinctrl-names = "default";
++	pinctrl-0 = <&pwm1_pin>;
++	status = "okay";
++};
+-- 
+2.43.0
+
