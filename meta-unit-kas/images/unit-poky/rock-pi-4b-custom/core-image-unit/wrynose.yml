@@ -12,13 +12,14 @@ header:
     - meta-unit-kas/include/layers/meta-arm/wrynose.yml
     - meta-unit-kas/include/layers/meta-rockchip/remote.yml
     - meta-unit-kas/include/layers/meta-rockchip/wrynose.yml
-    - meta-unit-kas/include/layers/meta-rockchip/rock-pi-4b.yml
+    - meta-unit-kas/include/layers/meta-rockchip-extra/rock-pi-4b-custom.yml
     - meta-unit-kas/include/layers/meta-openembedded/wrynose.yml
     - meta-unit-kas/include/layers/meta-openembedded/remote.yml
     - meta-unit-kas/include/layers/meta-virtualization/wrynose.yml
     - meta-unit-kas/include/layers/meta-virtualization/remote.yml
     - meta-unit-kas/include/layers/meta-unit-core/core-image-unit.yml
     - meta-unit-kas/include/layers/meta-unit-distro/unit-poky.yml
+    - meta-unit-kas/include/features/sdk/wrynose/rust.yml
 
 repos:
   meta-arm:
@@ -34,6 +35,7 @@ repos:
       meta-python:
   meta-unit:
     layers:
+      meta-rockchip-extra:
       meta-unit-core:
       meta-unit-distro:
       meta-unit-profiling:
