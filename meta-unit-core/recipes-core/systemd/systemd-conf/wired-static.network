@@ -1,0 +1,8 @@
+[Match]
+Type=ether
+Name=!veth*
+KernelCommandLine=!nfsroot
+KernelCommandLine=!ip
+
+[Address]
+Address=@@STATIC_IP_ADDRESS@@
