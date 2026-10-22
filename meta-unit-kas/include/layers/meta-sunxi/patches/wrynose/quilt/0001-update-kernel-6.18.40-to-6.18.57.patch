@@ -1,0 +1,29 @@
+From 29164a03c6260e3d9e795b9c7568172ad6f9cb37 Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Wed, 21 Oct 2026 20:53:11 -0500
+Subject: [PATCH] update kernel 6.18.40 to 6.18.57
+
+---
+ .../{linux-mainline_6.18.40.bb => linux-mainline_6.18.57.bb}    | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ rename recipes-kernel/linux/{linux-mainline_6.18.40.bb => linux-mainline_6.18.57.bb} (86%)
+
+diff --git a/recipes-kernel/linux/linux-mainline_6.18.40.bb b/recipes-kernel/linux/linux-mainline_6.18.57.bb
+similarity index 86%
+rename from recipes-kernel/linux/linux-mainline_6.18.40.bb
+rename to recipes-kernel/linux/linux-mainline_6.18.57.bb
+index d69cd0f..63a84e9 100644
+--- a/recipes-kernel/linux/linux-mainline_6.18.40.bb
++++ b/recipes-kernel/linux/linux-mainline_6.18.57.bb
+@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
+ SRC_URI += "https://www.kernel.org/pub/linux/kernel/v${KRELEASE}.x/linux-${PV}.tar.xz \
+            file://sunxi-kmeta;type=kmeta;name=sunxi-kmeta;destsuffix=sunxi-kmeta \
+            "
+-SRC_URI[sha256sum] = "3712fc1ec839e4daac981176c8518912e8f452650aaedfe4381da4419613a431"
++SRC_URI[sha256sum] = "5bd9acdc82ec5efc3790ae840e5aaa40dfde7efff261cf6dde902dc570acf98c"
+ 
+ KERNEL_FEATURES:append:orange-pi-3lts = " bsp/orange-pi-3lts/orange-pi-3lts-6_5.scc bsp/uwe5622/uwe5622-6_6.scc bsp/orange-pi-3lts/fix-rtc.scc"
+ KERNEL_FEATURES:append:orange-pi-zero2 = " bsp/h61x/orangepi-zero2-6_6.scc bsp/uwe5622/uwe5622-6_6.scc"
+-- 
+2.43.0
+
