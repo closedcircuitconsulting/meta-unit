@@ -1,0 +1,40 @@
+From 00d3564ce44f4c704ce9408c7c5b965bef5db0bc Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Thu, 22 Oct 2026 12:11:22 -0500
+Subject: [PATCH 1/2] add am335x boneblack enable pwm1b dtsi
+
+Upstream-Status: Inappropriate [embedded-specific]
+
+---
+ .../omap/am335x-boneblack-enable-pwm1b.dtsi   | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ create mode 100644 arch/arm/boot/dts/ti/omap/am335x-boneblack-enable-pwm1b.dtsi
+
+diff --git a/arch/arm/boot/dts/ti/omap/am335x-boneblack-enable-pwm1b.dtsi b/arch/arm/boot/dts/ti/omap/am335x-boneblack-enable-pwm1b.dtsi
+new file mode 100644
+index 000000000000..e136e444b022
+--- /dev/null
++++ b/arch/arm/boot/dts/ti/omap/am335x-boneblack-enable-pwm1b.dtsi
+@@ -0,0 +1,19 @@
++// SPDX-License-Identifier: GPL-2.0-only OR MIT
++
++&am33xx_pinmux {
++    ehrpwm1_pins: pinmux-ehrpwm1-pins {
++        pinctrl-single,pins = <
++            AM33XX_PADCONF(AM335X_PIN_GPMC_A3, PIN_OUTPUT, MUX_MODE6)
++        >;
++    };
++};
++
++&epwmss1 {
++    status = "okay";
++};
++
++&ehrpwm1 {
++    pinctrl-names = "default";
++    pinctrl-0 = <&ehrpwm1_pins>;
++    status = "okay";
++};
+-- 
+2.43.0
+

@@ -2,19 +2,20 @@ header:
   version: 23
   includes:
     - meta-unit-kas/include/build/conf.yml
-    - meta-unit-kas/include/layers/bitbake/2.20.yml
+    - meta-unit-kas/include/layers/bitbake/2.18.yml
     - meta-unit-kas/include/layers/bitbake/remote.yml
-    - meta-unit-kas/include/layers/openembedded-core/blacksail.yml
+    - meta-unit-kas/include/layers/openembedded-core/wrynose.yml
     - meta-unit-kas/include/layers/openembedded-core/remote.yml
-    - meta-unit-kas/include/layers/meta-yocto/blacksail.yml
+    - meta-unit-kas/include/layers/meta-yocto/wrynose.yml
     - meta-unit-kas/include/layers/meta-yocto/remote.yml
-    - meta-unit-kas/include/layers/meta-yocto/beaglebone-yocto.yml
-    - meta-unit-kas/include/layers/meta-openembedded/blacksail.yml
+    - meta-unit-kas/include/layers/meta-yocto-extra/beaglebone-yocto-custom.yml
+    - meta-unit-kas/include/layers/meta-openembedded/wrynose.yml
     - meta-unit-kas/include/layers/meta-openembedded/remote.yml
-    - meta-unit-kas/include/layers/meta-virtualization/main.yml
+    - meta-unit-kas/include/layers/meta-virtualization/wrynose.yml
     - meta-unit-kas/include/layers/meta-virtualization/remote.yml
     - meta-unit-kas/include/layers/meta-unit-core/core-image-unit.yml
     - meta-unit-kas/include/layers/meta-unit-distro/unit-poky.yml
+    - meta-unit-kas/include/features/sdk/wrynose/rust.yml
 
 repos:
   meta-openembedded:
