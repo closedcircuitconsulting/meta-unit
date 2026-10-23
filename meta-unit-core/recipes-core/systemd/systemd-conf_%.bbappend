@@ -33,7 +33,7 @@ do_install:append() {
         # Customize timesyncd behavior if enabled
         if ${@bb.utils.contains('PACKAGECONFIG', 'timesyncd', 'true', 'false', d)}; then
             # With static network, need a way to get time otherwise certificate expiry cant be known without setting manually
-            install -D -m 0644 ${UNPACKDIR}/static-ntp-server.conf ${D}${sysconfdir}/systemd/timesyncd.conf.d/${NTP_SERVER_DROP_IN_PRIORITY}-static-ntp-server.conf
+            install -D -m 0644 ${UNPACKDIR}/static-ntp-server.conf ${D}${systemd_unitdir}/timesyncd.conf.d/${NTP_SERVER_DROP_IN_PRIORITY}-static-ntp-server.conf
 
             # Do variable substitution for NTP server static IPv4 address
             sed -i 's|@@NTP_SERVER_STATIC_IP_ADDRESS@@|${NTP_SERVER_STATIC_IP_ADDRESS}|g' ${D}${systemd_unitdir}/timesyncd.conf.d/${NTP_SERVER_DROP_IN_PRIORITY}-static-ntp-server.conf
@@ -41,10 +41,9 @@ do_install:append() {
     fi
 
     # Customize journal behavior
-    install -D -m 0644 ${UNPACKDIR}/journald-persistent-storage.conf ${D}${sysconfdir}/systemd/journald.conf.d/${JOURNAL_PERSISTANT_STORAGE_DROP_IN_PRIORITY}-journald-persistent-storage.conf
+    install -D -m 0644 ${UNPACKDIR}/journald-persistent-storage.conf ${D}${systemd_unitdir}/journald.conf.d/${JOURNAL_PERSISTANT_STORAGE_DROP_IN_PRIORITY}-journald-persistent-storage.conf
 }
 
 FILES:${PN}:append = " \
-    ${sysconfdir}/systemd/timesyncd.conf.d/{NTP_SERVER_DROP_IN_PRIORITY}-static-ntp-server.conf \
-    ${sysconfdir}/systemd/journald.conf.d/${JOURNAL_PERSISTANT_STORAGE_DROP_IN_PRIORITY}-journald-persistent-storage.conf \
+    ${systemd_unitdir}/timesyncd.conf.d/ \
 "
