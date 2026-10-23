@@ -3,6 +3,9 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 PACKAGECONFIG:append = " ${@bb.utils.contains('DISTRO_FEATURES', 'prefer-static-ethernet', 'static-ethernet', 'dhcp-ethernet', d)}"
 PACKAGECONFIG[static-ethernet] = ""
 
+PACKAGECONFIG:append = " timesyncd"
+PACKAGECONFIG[timesyncd] = ""
+
 SRC_URI:append = " \
     file://wired-static.network \
     file://static-ntp-server.conf \
