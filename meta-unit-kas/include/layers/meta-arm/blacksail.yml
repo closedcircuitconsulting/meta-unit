@@ -4,4 +4,4 @@ header:
 repos:
   meta-arm:
     branch: blacksail
-    commit: 49a410f6d26b7a3f91d0f3bbeffdc8f38bc62287
+    commit: a19f2dba816a211c699cb1318b7dbb818da4e32c
