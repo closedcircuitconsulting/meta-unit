@@ -1,6 +1,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-PACKAGECONFIG = "${@bb.utils.contains('IMAGE_FEATURES', 'prefer-static-ethernet', 'static-ethernet', 'dhcp-ethernet', d)}"
+PACKAGECONFIG = "${@bb.utils.contains('DISTRO_FEATURES', 'prefer-static-ethernet', 'static-ethernet', 'dhcp-ethernet', d)}"
 PACKAGECONFIG[static-ethernet] = ""
 
 SRC_URI:append = " \

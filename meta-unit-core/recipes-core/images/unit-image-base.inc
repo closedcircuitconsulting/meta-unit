@@ -4,9 +4,6 @@ inherit image-buildinfo
 IMAGE_FEATURES[validitems] += "boot-splash"
 IMAGE_FEATURES[validitems] += "observability"
 
-# Uses dhcp by default if not provided
-IMAGE_FEATURES[validitems] += "prefer-static-ethernet"
-
 IMAGE_INSTALL:append = " packagegroup-unit-networking"
 IMAGE_INSTALL:append = " packagegroup-unit-system"
 IMAGE_INSTALL:append = " packagegroup-unit-systemd"

@@ -3,4 +3,4 @@ header:
 
 local_conf_header:
   prefer-static-ethernet: |
-    IMAGE_FEATURES:append = " prefer-static-ethernet"
+    DISTRO_FEATURES:append = " prefer-static-ethernet"
