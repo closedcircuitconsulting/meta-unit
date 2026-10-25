@@ -24,9 +24,12 @@ IMAGE_LINGUAS = ""
 # on the kernel image.
 PACKAGE_EXCLUDE = "kernel-image-*"
 
+# Prevent circular dependencies
 IMAGE_FSTYPES = "${INITRAMFS_FSTYPES}"
 IMAGE_FSTYPES:remove:rpi = "wic.zst"
 IMAGE_FSTYPES:remove:sunxi = "wic.zst"
+IMAGE_FSTYPES:remove:mx8m-generic-bsp = "wic.zst"
+
 IMAGE_NAME_SUFFIX ?= ""
 IMAGE_ROOTFS_SIZE = "24576"
 IMAGE_ROOTFS_EXTRA_SPACE = "0"
