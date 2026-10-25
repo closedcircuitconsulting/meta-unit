@@ -22,6 +22,7 @@ header:
     - meta-unit-kas/include/layers/meta-virtualization/remote.yml
     - meta-unit-kas/include/layers/meta-unit-core/core-image-unit.yml
     - meta-unit-kas/include/layers/meta-unit-distro/unit-poky.yml
+    - meta-unit-kas/include/features/sdk/wrynose/rust.yml
 
 repos:
   meta-openembedded:
