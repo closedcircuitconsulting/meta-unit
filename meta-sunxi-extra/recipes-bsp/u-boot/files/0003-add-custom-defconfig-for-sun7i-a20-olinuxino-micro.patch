@@ -1,0 +1,49 @@
+From 2d4345a56bbd1382bb6b2e05ea44155a56ba3fee Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Sat, 24 Oct 2026 23:05:46 -0500
+Subject: [PATCH 3/3] add custom defconfig for sun7i a20 olinuxino micro
+
+Upstream-Status: Inappropriate [embedded-specific]
+
+---
+ .../A20-OLinuXino_MICRO-eMMC-CUSTOM_defconfig | 28 +++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+ create mode 100644 configs/A20-OLinuXino_MICRO-eMMC-CUSTOM_defconfig
+
+diff --git a/configs/A20-OLinuXino_MICRO-eMMC-CUSTOM_defconfig b/configs/A20-OLinuXino_MICRO-eMMC-CUSTOM_defconfig
+new file mode 100644
+index 00000000000..6a0f6593252
+--- /dev/null
++++ b/configs/A20-OLinuXino_MICRO-eMMC-CUSTOM_defconfig
+@@ -0,0 +1,28 @@
++CONFIG_ARM=y
++CONFIG_ARCH_SUNXI=y
++CONFIG_DEFAULT_DEVICE_TREE="sun7i-a20-olinuxino-micro-emmc-custom"
++CONFIG_SPL=y
++CONFIG_MACH_SUN7I=y
++CONFIG_DRAM_CLK=384
++CONFIG_MMC_SUNXI_SLOT_EXTRA=2
++CONFIG_I2C1_ENABLE=y
++CONFIG_VIDEO_VGA=y
++CONFIG_AHCI=y
++# CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
++CONFIG_SPL_I2C=y
++CONFIG_SCSI_AHCI=y
++CONFIG_SYS_64BIT_LBA=y
++CONFIG_SYS_I2C_MVTWSI=y
++CONFIG_SYS_I2C_SLAVE=0x7f
++CONFIG_SYS_I2C_SPEED=400000
++CONFIG_PHY_REALTEK=y
++CONFIG_ETH_DESIGNWARE=y
++CONFIG_MII=y
++CONFIG_SUN7I_GMAC=y
++CONFIG_SUN7I_GMAC_FORCE_TXERR=y
++CONFIG_AXP_ALDO3_VOLT=2800
++CONFIG_AXP_ALDO3_INRUSH_QUIRK=y
++CONFIG_AXP_ALDO4_VOLT=2800
++CONFIG_SCSI=y
++CONFIG_USB_EHCI_HCD=y
++CONFIG_USB_OHCI_HCD=y
+-- 
+2.43.0
+

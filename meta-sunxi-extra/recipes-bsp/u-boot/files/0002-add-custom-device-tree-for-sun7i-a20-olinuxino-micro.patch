@@ -1,0 +1,42 @@
+From 189f5a08e563a4edd9ed69674e05acae113d9ec6 Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Sat, 24 Oct 2026 23:05:21 -0500
+Subject: [PATCH 2/3] add custom device tree for sun7i a20 olinuxino micro
+
+Upstream-Status: Inappropriate [embedded-specific]
+
+---
+ arch/arm/dts/Makefile                                  | 1 +
+ arch/arm/dts/sun7i-a20-olinuxino-micro-emmc-custom.dts | 8 ++++++++
+ 2 files changed, 9 insertions(+)
+ create mode 100644 arch/arm/dts/sun7i-a20-olinuxino-micro-emmc-custom.dts
+
+diff --git a/arch/arm/dts/Makefile b/arch/arm/dts/Makefile
+index fcad6fb2fc7..15a462d6dc8 100644
+--- a/arch/arm/dts/Makefile
++++ b/arch/arm/dts/Makefile
+@@ -584,6 +584,7 @@ dtb-$(CONFIG_MACH_SUN7I) += \
+ 	sun7i-a20-olinuxino-lime2-emmc.dtb \
+ 	sun7i-a20-olinuxino-micro.dtb \
+ 	sun7i-a20-olinuxino-micro-emmc.dtb \
++	sun7i-a20-olinuxino-micro-emmc-custom.dtb \
+ 	sun7i-a20-orangepi.dtb \
+ 	sun7i-a20-orangepi-mini.dtb \
+ 	sun7i-a20-pcduino3.dtb \
+diff --git a/arch/arm/dts/sun7i-a20-olinuxino-micro-emmc-custom.dts b/arch/arm/dts/sun7i-a20-olinuxino-micro-emmc-custom.dts
+new file mode 100644
+index 00000000000..3c6f9f43224
+--- /dev/null
++++ b/arch/arm/dts/sun7i-a20-olinuxino-micro-emmc-custom.dts
+@@ -0,0 +1,8 @@
++// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
++/*
++ * Copyright (c) 2026 unitexe <unitexe70@gmail.com.com>
++ */
++
++/dts-v1/;
++#include "sun7i-a20-olinuxino-micro-emmc.dts"
++#include "sun7i-a20-enable-pwm1.dtsi"
+-- 
+2.43.0
+
