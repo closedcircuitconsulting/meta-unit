@@ -1,0 +1,4 @@
+header:
+  version: 23
+
+machine: pine64-pinephone-braveheart
