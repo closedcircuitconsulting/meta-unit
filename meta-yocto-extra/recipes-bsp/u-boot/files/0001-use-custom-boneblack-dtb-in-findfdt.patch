@@ -1,0 +1,27 @@
+From 4016ddcb4c95ab79c9a76a6917ca9dae1c61ee51 Mon Sep 17 00:00:00 2001
+From: unitexe <unitexe70@gmail.com>
+Date: Sun, 25 Oct 2026 21:56:37 -0500
+Subject: [PATCH] use custom boneblack dtb in findfdt
+
+Upstream-Status: Inappropriate [embedded-specific]
+
+---
+ include/configs/am335x_evm.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/am335x_evm.h b/include/configs/am335x_evm.h
+index d2164b41d6d..7915b7ee384 100644
+--- a/include/configs/am335x_evm.h
++++ b/include/configs/am335x_evm.h
+@@ -117,7 +117,7 @@
+ 		"if test $board_name = A335BONE; then " \
+ 			"setenv fdtfile am335x-bone.dtb; fi; " \
+ 		"if test $board_name = A335BNLT; then " \
+-			"setenv fdtfile am335x-boneblack.dtb; fi; " \
++			"setenv fdtfile am335x-boneblack-custom.dtb; fi; " \
+ 		"if test $board_name = A335PBGL; then " \
+ 			"setenv fdtfile am335x-pocketbeagle.dtb; fi; " \
+ 		"if test $board_name = BBBW; then " \
+-- 
+2.43.0
+
