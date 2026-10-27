@@ -1,0 +1,6 @@
+header:
+  version: 23
+
+env:
+  WIFI_SSID: null
+  WIFI_PSK: null

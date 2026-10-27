@@ -1,7 +1,9 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 PACKAGECONFIG:append = " ${@bb.utils.contains('DISTRO_FEATURES', 'prefer-static-ethernet', 'static-ethernet', 'dhcp-ethernet', d)}"
+PACKAGECONFIG:append:pine64-pinephone-braveheart = " dhcp-wifi"
 PACKAGECONFIG[static-ethernet] = ""
+PACKAGECONFIG[dhcp-wifi] = ""
 
 PACKAGECONFIG:append = " timesyncd"
 PACKAGECONFIG[timesyncd] = ""
@@ -10,6 +12,7 @@ SRC_URI:append = " \
     file://wired-static.network \
     file://static-ntp-server.conf \
     file://journald-persistent-storage.conf \
+    file://wlan.network \
 "
 
 # Make priority higher (lower) than the priority of the wired.network being provided by openembedded-core
@@ -41,6 +44,11 @@ do_install:append() {
             # Do variable substitution for NTP server static IPv4 address
             sed -i 's|@@NTP_SERVER_STATIC_IP_ADDRESS@@|${NTP_SERVER_STATIC_IP_ADDRESS}|g' ${D}${systemd_unitdir}/timesyncd.conf.d/${NTP_SERVER_DROP_IN_PRIORITY}-static-ntp-server.conf
         fi
+    fi
+
+    # Apply changes for DHCP wifi if enabled
+    if ${@bb.utils.contains('PACKAGECONFIG', 'dhcp-wifi', 'true', 'false', d)}; then
+        install -D -m 0644 ${S}/wlan.network ${D}${systemd_unitdir}/network/25-wlan.network
     fi
 
     # Customize journal behavior
